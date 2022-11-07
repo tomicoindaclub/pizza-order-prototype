@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url(pics/pizza_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 10px;
+}
+body .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+body .container .list-box {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-direction: row;
+  width: 35%;
+  height: 80vh;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+body .container .list-box .quantity-div {
+  align-items: stretch;
+}
+body .container .list-box .quantity-div form {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+body .container .list-box .quantity-div form .quantity {
+  width: 30px;
+  margin-right: 10px;
+}
+body .container .order-box {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  width: 35%;
+  height: 80vh;
+  border-radius: 10px;
+  opacity: 0.8;
+}/*# sourceMappingURL=style.css.map */
