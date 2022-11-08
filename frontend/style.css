@@ -30,9 +30,15 @@ body .container .list-box {
   align-items: stretch;
   flex-direction: row;
   width: 35%;
-  height: 80vh;
+  height: 90vh;
   border-radius: 10px;
   opacity: 0.8;
+}
+body .container .list-box .pizzas h2 {
+  margin-bottom: 20px;
+}
+body .container .list-box .pizzas img {
+  height: 70px;
 }
 body .container .list-box .quantity-div {
   align-items: stretch;
@@ -51,7 +57,7 @@ body .container .order-box {
   display: flex;
   flex-direction: row;
   width: 35%;
-  height: 80vh;
+  height: 90vh;
   border-radius: 10px;
   opacity: 0.8;
 }/*# sourceMappingURL=style.css.map */

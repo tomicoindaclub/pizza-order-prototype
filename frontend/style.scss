@@ -31,11 +31,17 @@ body {
       align-items: stretch;
       flex-direction: row;
       width: 35%;
-      height: 80vh;
+      height: 90vh;
       border-radius: 10px;
       opacity: 0.8;
 
       .pizzas {
+        h2 {
+          margin-bottom: 20px;
+        }
+        img {
+          height: 70px;
+        }
       }
 
       .quantity-div {
@@ -58,7 +64,7 @@ body {
       display: flex;
       flex-direction: row;
       width: 35%;
-      height: 80vh;
+      height: 90vh;
       border-radius: 10px;
       opacity: 0.8;
     }
