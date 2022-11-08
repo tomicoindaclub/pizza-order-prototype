@@ -40,16 +40,28 @@ body {
       height: 100%;
       border-radius: 10px;
       opacity: 0.8;
+      box-shadow: 2px 2px 2px 2px gray;
 
       .pizzas {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         width: 95%;
 
         .pizza-lap {
           color: black;
+          display: flex;
           font-size: 200%;
-          padding: 5px;
+          background-color: lightgrey;
+          opacity: 0.9;
+          padding: 1px;
+          border-radius: 10px;
+          width: 30%;
+          height: 5%;
+          margin-bottom: 5px;
+          margin-top: 2px;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         .pizza-card {
@@ -64,34 +76,54 @@ body {
           box-shadow: 2px 2px 2px 2px gray;
           height: 10%;
 
-          span {
-            width: 75%;
+          img {
+            height: 100%;
             margin-right: 20px;
+            width: 13%;
+            box-shadow: 2px 2px 2px 2px grey;
+            border-radius: 50%;
+          }
+
+          span {
+            width: 60%;
 
             p {
               width: 100%;
+              font-weight: 700;
             }
           }
-        }
-        h2 {
-          // margin-bottom: 20px;
-        }
-        img {
-          height: 100%;
-          margin-right: 20px;
-        }
-      }
 
-      .quantity-div {
-        align-items: stretch;
-        form {
-          display: flex;
-          flex-direction: row;
-          margin-top: 4.5rem;
+          form {
+            display: flex;
+            flex-direction: row;
+            input[type="number"]::-webkit-inner-spin-button {
+              cursor: url(../frontend/pics/cursor_pizza.svg), auto;
+            }
 
-          .quantity {
-            width: 30px;
-            margin-right: 10px;
+            input.kosar-button {
+              color: black;
+              font-weight: 500;
+              background-color: rgb(167, 159, 159);
+              border: none;
+              border-radius: 10px;
+              font-weight: 700;
+              padding: 5px;
+              box-shadow: 1px 1px 1px 1px grey;
+            }
+
+            input.kosar-button:active {
+              transition: ease-in;
+              box-shadow: none;
+            }
+
+            .quantity {
+              width: 30px;
+              margin-right: 10px;
+              height: 20px;
+              padding: 5px;
+              border: 0;
+              border-radius: 10px;
+            }
           }
         }
       }
