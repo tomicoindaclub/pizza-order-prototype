@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  cursor: url(../frontend/pics/cursor_pizza.svg), auto;
 }
 
 body {
@@ -16,7 +17,8 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    padding: 10px;
+    padding: 5px;
+    font-size: 60px;
   }
 
   .container {
@@ -42,10 +44,19 @@ body {
         flex-direction: column;
         width: 95%;
 
+        .pizza-lap {
+          color: black;
+          font-size: 3rem;
+          padding: 10px;
+        }
+
         .pizza-card {
           display: flex;
           flex-direction: row;
           align-items: center;
+          border: 1px solid gray;
+          border-radius: 10px;
+          margin-bottom: 2px;
 
           span {
             width: 60%;
