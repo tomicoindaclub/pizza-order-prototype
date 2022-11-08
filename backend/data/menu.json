@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Margherita",
+    "ingredients": "Marinara sauce, Tomato, Mozzarella, Basil leaves",
+    "pic": "/img/margherita.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Prosciutto",
+    "ingredients": "Tomato sauce, Prosciutto slices, Parmesan, Mozzarella",
+    "pic": "/img/prosciutto.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Hawaiian Pizza",
+    "ingredients": "Pinapple, Ham, Bacon, Cheese,",
+    "pic": "/img/hawaii.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Mexican Pizza",
+    "ingredients": "Black beans, Jalapeno pepper, Cheddar cheese, Grounded beef, Onion",
+    "pic": "/img/mexican.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Gyros Pizza",
+    "ingredients": "Tzatziki sauce, Grilled chicken, Feta cheese, Tomato,Onion",
+    "pic": "/img/gyros.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Vegan Pizza",
+    "ingredients": "Pesto sauce, Spinach, Tomato, Broccoli",
+    "pic": "/img/vegan.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Seafood Pizza",
+    "ingredients": "Tomato sauce, Shrimp, Mozzarella, Basil leaves",
+    "pic": "/img/seafood.jpg"
+  }
+]
