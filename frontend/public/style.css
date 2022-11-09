@@ -1,38 +1,130 @@
-/* --- start of CSS reset --- */
-
 * {
   margin: 0;
   padding: 0;
-  border: 0;
-  outline: none;
-  box-sizing: border-box;
-  background: transparent;
-  font-family: inherit;
+  cursor: url(../../backend/data/img/cursor_pizza.svg), auto;
+  font-family: "Quicksand", sans-serif;
 }
 
-a {
-  text-decoration: none;
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../backend/data/img/pizza_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
 }
-
-a img {
+body h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 5px;
+  height: 8%;
+  font-size: 350%;
+}
+body .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+}
+body .container .list-box {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-direction: row;
+  width: 45%;
+  height: 100%;
+  border-radius: 10px;
+  opacity: 0.8;
+  box-shadow: 2px 2px 2px 2px gray;
+}
+body .container .list-box .pizzas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 95%;
+}
+body .container .list-box .pizzas .pizza-lap {
+  color: black;
+  display: flex;
+  font-size: 200%;
+  background-color: lightgrey;
+  opacity: 0.9;
+  padding: 1px;
+  border-radius: 10px;
+  width: 30%;
+  height: 5%;
+  margin-bottom: 5px;
+  margin-top: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body .container .list-box .pizzas .pizza-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: lightgrey;
+  opacity: 0.9;
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 0.7rem;
+  box-shadow: 2px 2px 2px 2px gray;
+  height: 10%;
+}
+body .container .list-box .pizzas .pizza-card img {
+  height: 100%;
+  margin-right: 20px;
+  width: 13%;
+  box-shadow: 2px 2px 2px 2px grey;
+  border-radius: 50%;
+}
+body .container .list-box .pizzas .pizza-card span {
+  width: 60%;
+}
+body .container .list-box .pizzas .pizza-card span p {
+  width: 100%;
+  font-weight: 700;
+}
+body .container .list-box .pizzas .pizza-card form {
+  display: flex;
+  flex-direction: row;
+}
+body .container .list-box .pizzas .pizza-card form input[type=number]::-webkit-inner-spin-button {
+  cursor: url(../../backend/data/img/cursor_pizza.svg), auto;
+}
+body .container .list-box .pizzas .pizza-card form input.kosar-button {
+  color: black;
+  font-weight: 500;
+  background-color: rgb(167, 159, 159);
   border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 5px;
+  box-shadow: 1px 1px 1px 1px grey;
 }
-
-button,
-a {
-  cursor: pointer;
-  color: inherit;
+body .container .list-box .pizzas .pizza-card form input.kosar-button:active {
+  transition: ease-in;
+  box-shadow: none;
 }
-
-textarea {
-  resize: none;
+body .container .list-box .pizzas .pizza-card form .quantity {
+  width: 30px;
+  margin-right: 10px;
+  height: 20px;
+  padding: 5px;
+  border: 0;
+  border-radius: 10px;
 }
-
-button,
-textarea,
-select {
-  appearance: none !important;
-  border-radius: 0;
-}
-
-/* --- end of CSS reset --- */
+body .container .order-box {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-direction: row;
+  width: 45%;
+  height: 100%;
+  border-radius: 10px;
+  opacity: 0.8;
+}/*# sourceMappingURL=style.css.map */

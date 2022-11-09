@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  cursor: url(../../backend/data/img/cursor_pizza.svg), auto;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../backend/data/img/pizza_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 5px;
+    height: 8%;
+    font-size: 350%;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+
+    .list-box {
+      background-color: white;
+      display: flex;
+      justify-content: space-around;
+      align-items: stretch;
+      flex-direction: row;
+      width: 45%;
+      height: 100%;
+      border-radius: 10px;
+      opacity: 0.8;
+      box-shadow: 2px 2px 2px 2px gray;
+
+      .pizzas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 95%;
+
+        .pizza-lap {
+          color: black;
+          display: flex;
+          font-size: 200%;
+          background-color: lightgrey;
+          opacity: 0.9;
+          padding: 1px;
+          border-radius: 10px;
+          width: 30%;
+          height: 5%;
+          margin-bottom: 5px;
+          margin-top: 2px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .pizza-card {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          background-color: lightgrey;
+          opacity: 0.9;
+          padding: 5px;
+          border-radius: 10px;
+          margin-bottom: 0.7rem;
+          box-shadow: 2px 2px 2px 2px gray;
+          height: 10%;
+
+          img {
+            height: 100%;
+            margin-right: 20px;
+            width: 13%;
+            box-shadow: 2px 2px 2px 2px grey;
+            border-radius: 50%;
+          }
+
+          span {
+            width: 60%;
+
+            p {
+              width: 100%;
+              font-weight: 700;
+            }
+          }
+
+          form {
+            display: flex;
+            flex-direction: row;
+            input[type="number"]::-webkit-inner-spin-button {
+              cursor: url(../../backend/data/img/cursor_pizza.svg), auto;
+            }
+
+            input.kosar-button {
+              color: black;
+              font-weight: 500;
+              background-color: rgb(167, 159, 159);
+              border: none;
+              border-radius: 10px;
+              font-weight: 700;
+              padding: 5px;
+              box-shadow: 1px 1px 1px 1px grey;
+            }
+
+            input.kosar-button:active {
+              transition: ease-in;
+              box-shadow: none;
+            }
+
+            .quantity {
+              width: 30px;
+              margin-right: 10px;
+              height: 20px;
+              padding: 5px;
+              border: 0;
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .order-box {
+      background-color: white;
+      display: flex;
+      justify-content: space-around;
+      align-items: stretch;
+      flex-direction: row;
+      width: 45%;
+      height: 100%;
+      border-radius: 10px;
+      opacity: 0.8;
+    }
+  }
+}

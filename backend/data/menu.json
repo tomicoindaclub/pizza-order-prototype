@@ -1,44 +1,44 @@
 [
   {
     "id": 1,
-    "name": "Margherita",
-    "ingredients": "Marinara sauce, Tomato, Mozzarella, Basil leaves",
-    "pic": "/img/margherita.jpg"
+    "name": "Margarita",
+    "ingredients": "paradicsomszósz, sajt, bazsalikom.",
+    "pic": "/img/margherita.png"
   },
   {
     "id": 2,
-    "name": "Prosciutto",
-    "ingredients": "Tomato sauce, Prosciutto slices, Parmesan, Mozzarella",
-    "pic": "/img/prosciutto.jpg"
+    "name": "Queen Margarita",
+    "ingredients": "paradicsomszósz, sajt, zöldfűszerek, paprika.",
+    "pic": "/img/queen_maragherita.png"
   },
   {
     "id": 3,
-    "name": "Hawaiian Pizza",
-    "ingredients": "Pinapple, Ham, Bacon, Cheese,",
-    "pic": "/img/hawaii.jpg"
+    "name": "Bianca Verde",
+    "ingredients": "paradicsomszósz, sajt, zöldfűszerek, paprika.",
+    "pic": "/img/bianca_verde.png"
   },
   {
     "id": 4,
-    "name": "Mexican Pizza",
-    "ingredients": "Black beans, Jalapeno pepper, Cheddar cheese, Grounded beef, Onion",
-    "pic": "/img/mexican.jpg"
+    "name": "Bianca Rosa",
+    "ingredients": "olivaolaj, spenót, parmezán, koktélparadicsom, tejföl.",
+    "pic": "/img/bianca_rosa.png"
   },
   {
     "id": 5,
-    "name": "Gyros Pizza",
-    "ingredients": "Tzatziki sauce, Grilled chicken, Feta cheese, Tomato,Onion",
-    "pic": "/img/gyros.jpg"
+    "name": "Gombás",
+    "ingredients": "paradicsomszósz, sajt, gomba, tejföl.",
+    "pic": "/img/mashroom.png"
   },
   {
     "id": 6,
-    "name": "Vegan Pizza",
-    "ingredients": "Pesto sauce, Spinach, Tomato, Broccoli",
-    "pic": "/img/vegan.jpg"
+    "name": "Négysajtos",
+    "ingredients": "paradicsomszósz, kéksajt, ricotta, parmezán, mozzarella.",
+    "pic": "/img/negysajtos.png"
   },
   {
     "id": 7,
-    "name": "Seafood Pizza",
-    "ingredients": "Tomato sauce, Shrimp, Mozzarella, Basil leaves",
-    "pic": "/img/seafood.jpg"
+    "name": "Kolbászos",
+    "ingredients": "paradicsomszósz, kolbász, hagyma, bazsalikom.",
+    "pic": "/img/sausage.png"
   }
 ]
