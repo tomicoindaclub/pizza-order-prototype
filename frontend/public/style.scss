@@ -215,8 +215,8 @@ body {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background-image: url(/data/img/pizza_background.png);
-    cursor: url(/data/img/cursor_pizza.svg), auto;
+    background-image: url(/backend/data/img/pizza_background.png);
+    cursor: url(/backend/data/img/cursor_pizza.svg), auto;
     font-family: "Quicksand", sans-serif;
 
     .successful-order {
@@ -231,6 +231,8 @@ body {
       border-radius: 10px;
       margin-bottom: 0.7rem;
       box-shadow: 2px 2px 2px 2px gray;
+      cursor: url(/backend/data/img/cursor_pizza.svg), auto;
+      font-family: "Quicksand", sans-serif;
 
       h1 {
         display: flex;
@@ -238,6 +240,8 @@ body {
         color: black;
         margin-top: 5px;
         margin-bottom: 30px;
+        cursor: url(/backend/data/img/cursor_pizza.svg), auto;
+        font-family: "Quicksand", sans-serif;
       }
 
       .ordered {
@@ -253,6 +257,8 @@ body {
         margin-bottom: 0.7rem;
         box-shadow: 2px 2px 2px 2px gray;
         width: 90%;
+        cursor: url(/backend/data/img/cursor_pizza.svg), auto;
+        font-family: "Quicksand", sans-serif;
       }
     }
   }
