@@ -30,13 +30,15 @@ const orderComponent = function (id, pic, pizzaName, ingredients, amount) {
     <img src="${pic}" alt="" />
     <span>
         <h2>${pizzaName}</h2>
-            <p>${ingredients}</p>
+            
     </span>
     <form>
-        <h2>x${amount}</h2>
+        <h2>${amount} db</h2>
+        
     </form>
 </div>`;
 };
+/*<p>${ingredients}</p> - pizzaName alá*/
 
 const fetchMenu = async () => {
   return fetch("/menu").then((res) => res.json());
