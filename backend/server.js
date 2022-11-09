@@ -9,7 +9,7 @@ app.listen(9000, (_) => console.log("127.0.0.1:9000"));
 
 app.use("/public", express.static(`${__dirname}/../frontend/public`));
 
-app.use("/data", express.static(`${__dirname}/../backend/data`));
+app.use("/data/img", express.static(`${__dirname}/../backend/data/img`));
 
 // app.get("/pizza-background.png", (req, res) =>
 //   res.sendFile(

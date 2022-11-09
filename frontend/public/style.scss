@@ -1,14 +1,14 @@
 * {
   margin: 0;
   padding: 0;
-  cursor: url(../../backend/data/img/cursor_pizza.svg), auto;
+  cursor: url(/data/img/cursor_pizza.svg), auto;
   font-family: "Quicksand", sans-serif;
 }
 
 body {
   width: 100%;
   height: 100vh;
-  background-image: url(../../backend/data/img/pizza_background.png);
+  background-image: url(/data/img/pizza_background.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0;
@@ -97,7 +97,7 @@ body {
             display: flex;
             flex-direction: row;
             input[type="number"]::-webkit-inner-spin-button {
-              cursor: url(../../backend/data/img/cursor_pizza.svg), auto;
+              cursor: url(/data/img/cursor_pizza.svg), auto;
             }
 
             input.kosar-button {
@@ -132,13 +132,68 @@ body {
     .order-box {
       background-color: white;
       display: flex;
-      justify-content: space-around;
-      align-items: stretch;
-      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
       width: 45%;
       height: 100%;
       border-radius: 10px;
       opacity: 0.8;
+
+      h2 {
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 200%;
+        background-color: lightgrey;
+        opacity: 0.9;
+        padding: 1px;
+        border-radius: 10px;
+        width: 30%;
+        height: 5%;
+        margin-bottom: 5px;
+        margin-top: 2px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .ordered-pizzas {
+        display: flex;
+        height: 60%;
+        flex-direction: column;
+        align-items: center;
+        background-color: lightgrey;
+        opacity: 0.9;
+        padding: 5px;
+        border-radius: 10px;
+        margin-bottom: 0.7rem;
+        box-shadow: 2px 2px 2px 2px gray;
+        width: 95%;
+      }
+
+      .details {
+        display: flex;
+        height: 30%;
+        flex-direction: column;
+        align-items: center;
+        background-color: lightgrey;
+        opacity: 0.9;
+        padding: 5px;
+        border-radius: 10px;
+        margin-bottom: 0.7rem;
+        box-shadow: 2px 2px 2px 2px gray;
+        width: 95%;
+
+        input {
+          margin-top: 5px;
+          border-radius: 10px;
+          width: 50%;
+          height: 15%;
+          padding: 5px;
+          border: 0;
+        }
+      }
     }
   }
 }

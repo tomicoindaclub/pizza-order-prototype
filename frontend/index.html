@@ -11,216 +11,34 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="public/style.css" />
-    <title>Document</title>
+    <script defer src="public/script.js"></script>
+    <title>Pizza Puttony</title>
   </head>
 
-  <body>
+  <body id="root">
     <h1>Pizza Puttony</h1>
     <div class="container">
       <div class="list-box">
         <div class="pizzas">
           <h1 class="pizza-lap">Pizzák</h1>
-          <div class="pizza-card">
-            <img src="pics/margherita.png" alt="" />
-            <span>
-              <h2>Margarita</h2>
-              <p>paradicsomszósz, sajt, bazsalikom.</p>
-            </span>
-            <form action="">
-              <input
-                class="quantity"
-                type="number"
-                id="quantity"
-                name="quantity"
-                min="0"
-                max="10"
-              />
-              <input class="kosar-button" type="button" value="kosárba" />
-            </form>
-          </div>
-          <div class="pizza-card">
-            <img src="pics/queen_maragherita.png" alt="" />
-            <span>
-              <h2>Queen Margarita</h2>
-              <p>paradicsomszósz, sajt, zöldfűszerek, paprika.</p>
-            </span>
-            <form action="">
-              <input
-                class="quantity"
-                type="number"
-                id="quantity"
-                name="quantity"
-                min="0"
-                max="10"
-              />
-              <input class="kosar-button" type="button" value="kosárba" />
-            </form>
-          </div>
-          <div class="pizza-card">
-            <img src="pics/bianca verde.png" alt="" />
-            <span>
-              <h2>Bianca Verde</h2>
-              <p>paradicsomszósz, sajt, zöldfűszerek, paprika.</p>
-            </span>
-            <form action="">
-              <input
-                class="quantity"
-                type="number"
-                id="quantity"
-                name="quantity"
-                min="0"
-                max="10"
-              />
-              <input class="kosar-button" type="button" value="kosárba" />
-            </form>
-          </div>
-          <div class="pizza-card">
-            <img src="pics/bianca_rosa.png" alt="" />
-            <span>
-              <h2>Bianca Rosa</h2>
-              <p>olivaolaj, spenót, parmezán, koktélparadicsom, tejföl.</p>
-            </span>
-            <form action="">
-              <input
-                class="quantity"
-                type="number"
-                id="quantity"
-                name="quantity"
-                min="0"
-                max="10"
-              />
-              <input class="kosar-button" type="button" value="kosárba" />
-            </form>
-          </div>
-          <div class="pizza-card">
-            <img src="pics/mashroom.png" alt="" />
-            <span>
-              <h2>Gombás</h2>
-              <p>paradicsomszósz, sajt, gomba, tejföl.</p>
-            </span>
-            <form action="">
-              <input
-                class="quantity"
-                type="number"
-                id="quantity"
-                name="quantity"
-                min="0"
-                max="10"
-              />
-              <input class="kosar-button" type="button" value="kosárba" />
-            </form>
-          </div>
-          <div class="pizza-card">
-            <img src="pics/negysajtos.png" alt="" />
-            <span>
-              <h2>Négysajtos</h2>
-              <p>paradicsomszósz, kéksajt, ricotta, parmezán, mozzarella.</p>
-            </span>
-            <form action="">
-              <input
-                class="quantity"
-                type="number"
-                id="quantity"
-                name="quantity"
-                min="0"
-                max="10"
-              />
-              <input class="kosar-button" type="button" value="kosárba" />
-            </form>
-          </div>
-          <div class="pizza-card">
-            <img src="pics/sausage.png" alt="" />
-            <span>
-              <h2>Kolbászos</h2>
-              <p>paradicsomszósz, kolbász, hagyma, bazsalikom.</p>
-            </span>
-            <form action="">
-              <input
-                class="quantity"
-                type="number"
-                id="quantity"
-                name="quantity"
-                min="0"
-                max="10"
-              />
-              <input class="kosar-button" type="button" value="kosárba" />
-            </form>
-          </div>
         </div>
-        <!-- <div class="quantity-div">
-          <h2>Mennyiség</h2>
-
-          <form action="">
-            <input
-              class="quantity"
-              type="number"
-              id="quantity"
-              name="quantity"
-              min="1"
-              max="10"
-            />
-            <input type="button" value="add to order" />
-          </form>
-          <form action="">
-            <input
-              class="quantity"
-              type="number"
-              id="quantity"
-              name="quantity"
-              min="1"
-              max="10"
-            />
-            <input type="button" value="add to order" />
-          </form>
-          <form action="">
-            <input
-              class="quantity"
-              type="number"
-              id="quantity"
-              name="quantity"
-              min="1"
-              max="10"
-            />
-            <input type="button" value="add to order" />
-          </form>
-          <form action="">
-            <input
-              class="quantity"
-              type="number"
-              id="quantity"
-              name="quantity"
-              min="1"
-              max="10"
-            />
-            <input type="button" value="add to order" />
-          </form>
-          <form action="">
-            <input
-              class="quantity"
-              type="number"
-              id="quantity"
-              name="quantity"
-              min="1"
-              max="10"
-            />
-            <input type="button" value="add to order" />
-          </form>
-          <form action="">
-            <input
-              class="quantity"
-              type="number"
-              id="quantity"
-              name="quantity"
-              min="1"
-              max="10"
-            />
-            <input type="button" value="add to order" />
-          </form>
-        </div> -->
       </div>
 
       <div class="order-box">
         <h2>Kosár</h2>
+        <div class="ordered-pizzas"></div>
+        <div class="details">
+          <input class="name" name="name" placeholder="Név" type="text" />
+          <input class="address" name="address" placeholder="Cím" type="text" />
+          <input
+            class="phone"
+            name="phone"
+            placeholder="Telefonszám"
+            type="text"
+          />
+          <input class="email" name="email" placeholder="E-mail" type="text" />
+          <input type="submit" value="Megrendelem" />
+        </div>
       </div>
     </div>
   </body>
