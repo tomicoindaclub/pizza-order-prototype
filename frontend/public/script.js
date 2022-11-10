@@ -33,7 +33,7 @@ const orderComponent = function (id, pic, pizzaName, amount) {
             
     </span>
     <form>
-        <h2 class="amount">${amount} db</h2>
+        <h2 class="amount${id}">${amount} db</h2>
     </form>
 </div>
 `;
@@ -90,34 +90,29 @@ orderButton.addEventListener("click", async function () {
   const menu = await fetchMenu();
   let orderItems = document.querySelectorAll(".order-pizza-card");
 
+  let orderArray = [];
+
+  function itemSort(item) {
+    let itemID = parseInt(item.id);
+    let itemAmountString = document.querySelector(
+      ".amount" + itemID
+    ).textContent;
+    let itemAmount = itemAmountString.slice(0, 1);
+
+    let itemArray = {
+      id: itemID,
+      amount: itemAmount,
+    };
+
+    orderArray.push(itemArray);
+  }
+  orderItems.forEach(itemSort);
+
   let orderSummary = {
     name: document.querySelector(".name").value,
     phone: document.querySelector(".phone").value,
     email: document.querySelector(".email").value,
     address: document.querySelector(".address").value,
-    order: {},
+    order: { orderArray },
   };
-
-  let orderArray = [];
-
-
-
-//   for (let i = 0; i < orderItems.length; i++) {
-//     let itemID = parseInt(orderItems[i].id);
-//     let itemAmountString = document.querySelector(".amount").textContent;
-//     let itemAmount = itemAmountString.slice(0, 1);
-//     console.log(itemID);
-//     console.log(itemAmount);
-
-//     // let orderArray = {
-//     //   1: {
-//     //     id: itemID,
-//     //     amount: itemAmount,
-//     //   },
-//     //   2: {
-//     //     id: itemID,
-//     //     amount: itemAmount,
-//     //   },
-//     // };
-//   }
-// });
+});
