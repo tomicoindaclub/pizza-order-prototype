@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "name": "Petruska Tamás",
+    "phone": "+36209560031",
+    "email": "tamas.petruska99@gmail.com",
+    "address": "1185 Üllői út 614",
+    "order": {
+      "orderArray": [
+        {
+          "pizza": "Margarita",
+          "amount": "3"
+        },
+        {
+          "pizza": "Négysajtos",
+          "amount": "1"
+        }
+      ]
+    }
+  }
+]

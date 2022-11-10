@@ -11,12 +11,6 @@ app.use("/public", express.static(`${__dirname}/../frontend/public`));
 
 app.use("/data/img", express.static(`${__dirname}/../backend/data/img`));
 
-// app.get("/pizza-background.png", (req, res) =>
-//   res.sendFile(
-//     path.join(`${__dirname}/../backend/data/img/pizza_background.png`)
-//   )
-// );
-
 app.get("/", (req, res) => {
   res.sendFile(path.join(`${__dirname}/../frontend/index.html`));
 });
@@ -27,6 +21,18 @@ app.get("/order-complete", (req, res) => {
 
 app.get("/menu", (req, res) => {
   fs.readFile(`${__dirname}/data/menu.json`, function (err, data) {
+    if (err) {
+      console.log(err);
+      return res.status(500).send(err);
+    } else {
+      studentData = JSON.parse(data);
+      return res.send(studentData);
+    }
+  });
+});
+
+app.get("/orders", (req, res) => {
+  fs.readFile(`${__dirname}/data/orders.json`, function (err, data) {
     if (err) {
       console.log(err);
       return res.status(500).send(err);

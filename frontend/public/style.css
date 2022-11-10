@@ -92,7 +92,13 @@ body .container .list-box .pizzas .pizza-card form {
   display: flex;
   flex-direction: row;
 }
-body .container .list-box .pizzas .pizza-card form input[type=number]::-webkit-inner-spin-button {
+body
+  .container
+  .list-box
+  .pizzas
+  .pizza-card
+  form
+  input[type="number"]::-webkit-inner-spin-button {
   cursor: url(/data/img/cursor_pizza.svg), auto;
 }
 body .container .list-box .pizzas .pizza-card form input.kosar-button {
@@ -279,4 +285,4 @@ body .container2 .successful-order .ordered {
   width: 90%;
   cursor: url(/backend/data/img/cursor_pizza.svg), auto;
   font-family: "Quicksand", sans-serif;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

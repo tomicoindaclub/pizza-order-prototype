@@ -29,7 +29,7 @@ const orderComponent = function (id, pic, pizzaName, amount) {
 <div class="order-pizza-card" id=${id}>
     <img src="${pic}" alt="" />
     <span>
-        <h2>${pizzaName}</h2>
+        <h2 class="pizza-name${id}">${pizzaName}</h2>
             
     </span>
     <form>
@@ -86,21 +86,21 @@ async function loadEvent() {
 rootElement.addEventListener("loaded", loadEvent());
 
 const orderButton = document.querySelector(".order-button");
-orderButton.addEventListener("click", async function () {
-  const menu = await fetchMenu();
+orderButton.addEventListener("click", function () {
   let orderItems = document.querySelectorAll(".order-pizza-card");
 
   let orderArray = [];
 
   function itemSort(item) {
     let itemID = parseInt(item.id);
+    let itemName = document.querySelector(".pizza-name" + itemID).textContent;
     let itemAmountString = document.querySelector(
       ".amount" + itemID
     ).textContent;
     let itemAmount = itemAmountString.slice(0, 1);
 
     let itemArray = {
-      id: itemID,
+      pizza: itemName,
       amount: itemAmount,
     };
 
@@ -115,4 +115,14 @@ orderButton.addEventListener("click", async function () {
     address: document.querySelector(".address").value,
     order: { orderArray },
   };
+
+  fetch("/order-pizza", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(orderSummary),
+  }).then((res) => console.log(res));
+
+  location.href = "/order-complete";
 });
