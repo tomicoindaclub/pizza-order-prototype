@@ -66,6 +66,20 @@ async function loadEvent() {
 
       const menu = await fetchMenu();
 
+      const cartItems = document.querySelectorAll(".order-pizza-card");
+      for (let i = 0; i < cartItems.length; i++) {
+        if (parseInt(cartItems[i].id) === itemID) {
+          let currentAmount = cartItems[i].querySelector(
+            ".amount" + itemID
+          ).textContent;
+          let newAmount =
+            parseInt(currentAmount.slice(0, 1)) + parseInt(orderAmount);
+          console.log(newAmount);
+          return (cartItems[i].querySelector(".amount" + itemID).textContent =
+            newAmount + " db");
+        }
+      }
+
       for (let i = 0; i < menu.length; i++) {
         if (itemID === menu[i].id) {
           orderList.insertAdjacentHTML(
