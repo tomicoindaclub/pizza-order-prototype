@@ -24,21 +24,20 @@ const menuComponent = function (id, pic, pizzaName, ingredients) {
 </div>`;
 };
 
-const orderComponent = function (id, pic, pizzaName, ingredients, amount) {
+const orderComponent = function (id, pic, pizzaName, amount) {
   return `
-<div class="pizza-card" id=${id}>
+<div class="order-pizza-card" id=${id}>
     <img src="${pic}" alt="" />
     <span>
         <h2>${pizzaName}</h2>
             
     </span>
     <form>
-        <h2>${amount} db</h2>
-        
+        <h2 class="amount">${amount} db</h2>
     </form>
-</div>`;
+</div>
+`;
 };
-/*<p>${ingredients}</p> - pizzaName alá*/
 
 const fetchMenu = async () => {
   return fetch("/menu").then((res) => res.json());
@@ -66,9 +65,6 @@ async function loadEvent() {
       let orderAmount = document.querySelector("#input" + itemID).value;
 
       const menu = await fetchMenu();
-      console.log(menu);
-      console.log(itemID);
-      console.log(orderAmount);
 
       for (let i = 0; i < menu.length; i++) {
         if (itemID === menu[i].id) {
@@ -78,7 +74,6 @@ async function loadEvent() {
               menu[i].id,
               menu[i].pic,
               menu[i].pizzaName,
-              menu[i].ingredients,
               orderAmount
             )
           );
@@ -89,3 +84,40 @@ async function loadEvent() {
 }
 
 rootElement.addEventListener("loaded", loadEvent());
+
+const orderButton = document.querySelector(".order-button");
+orderButton.addEventListener("click", async function () {
+  const menu = await fetchMenu();
+  let orderItems = document.querySelectorAll(".order-pizza-card");
+
+  let orderSummary = {
+    name: document.querySelector(".name").value,
+    phone: document.querySelector(".phone").value,
+    email: document.querySelector(".email").value,
+    address: document.querySelector(".address").value,
+    order: {},
+  };
+
+  let orderArray = [];
+
+
+
+//   for (let i = 0; i < orderItems.length; i++) {
+//     let itemID = parseInt(orderItems[i].id);
+//     let itemAmountString = document.querySelector(".amount").textContent;
+//     let itemAmount = itemAmountString.slice(0, 1);
+//     console.log(itemID);
+//     console.log(itemAmount);
+
+//     // let orderArray = {
+//     //   1: {
+//     //     id: itemID,
+//     //     amount: itemAmount,
+//     //   },
+//     //   2: {
+//     //     id: itemID,
+//     //     amount: itemAmount,
+//     //   },
+//     // };
+//   }
+// });

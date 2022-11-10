@@ -21,6 +21,10 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(`${__dirname}/../frontend/index.html`));
 });
 
+app.get("/order-complete", (req, res) => {
+  res.sendFile(path.join(`${__dirname}/../frontend/index2.html`));
+});
+
 app.get("/menu", (req, res) => {
   fs.readFile(`${__dirname}/data/menu.json`, function (err, data) {
     if (err) {
