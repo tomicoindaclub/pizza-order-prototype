@@ -92,13 +92,7 @@ body .container .list-box .pizzas .pizza-card form {
   display: flex;
   flex-direction: row;
 }
-body
-  .container
-  .list-box
-  .pizzas
-  .pizza-card
-  form
-  input[type="number"]::-webkit-inner-spin-button {
+body .container .list-box .pizzas .pizza-card form input[type=number]::-webkit-inner-spin-button {
   cursor: url(/data/img/cursor_pizza.svg), auto;
 }
 body .container .list-box .pizzas .pizza-card form input.kosar-button {
@@ -243,8 +237,10 @@ body .container2 {
   width: 100%;
   height: 100vh;
   background-image: url(/backend/data/img/pizza_background.png);
-  cursor: url(/backend/data/img/cursor_pizza.svg), auto;
   font-family: "Quicksand", sans-serif;
+}
+body .container2 input[type=number]::-webkit-inner-spin-button {
+  cursor: url(/data/img/cursor_pizza.svg), auto;
 }
 body .container2 .successful-order {
   display: flex;
@@ -258,8 +254,10 @@ body .container2 .successful-order {
   border-radius: 10px;
   margin-bottom: 0.7rem;
   box-shadow: 2px 2px 2px 2px gray;
-  cursor: url(/backend/data/img/cursor_pizza.svg), auto;
   font-family: "Quicksand", sans-serif;
+}
+body .container2 .successful-order input[type=number]::-webkit-inner-spin-button {
+  cursor: url(/data/img/cursor_pizza.svg), auto;
 }
 body .container2 .successful-order h1 {
   display: flex;
@@ -267,8 +265,10 @@ body .container2 .successful-order h1 {
   color: black;
   margin-top: 5px;
   margin-bottom: 30px;
-  cursor: url(/backend/data/img/cursor_pizza.svg), auto;
   font-family: "Quicksand", sans-serif;
+}
+body .container2 .successful-order h1 input[type=number]::-webkit-inner-spin-button {
+  cursor: url(/data/img/cursor_pizza.svg), auto;
 }
 body .container2 .successful-order .ordered {
   display: flex;
@@ -283,6 +283,8 @@ body .container2 .successful-order .ordered {
   margin-bottom: 0.7rem;
   box-shadow: 2px 2px 2px 2px gray;
   width: 90%;
-  cursor: url(/backend/data/img/cursor_pizza.svg), auto;
   font-family: "Quicksand", sans-serif;
-} /*# sourceMappingURL=style.css.map */
+}
+body .container2 .successful-order .ordered input[type=number]::-webkit-inner-spin-button {
+  cursor: url(/data/img/cursor_pizza.svg), auto;
+}/*# sourceMappingURL=style.css.map */
