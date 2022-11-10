@@ -26,21 +26,26 @@ const orderDetailsComponent = function (name, address, phone, email) {
 
 async function loadEvent() {
   const order = await fetchOrder();
-  const orderItems = order.order.orderArray;
+  const orderItems = order[0].order.orderArray;
 
   for (let i = 0; i < orderItems.length; i++) {
     orderSummaryElement.insertAdjacentHTML(
       "beforeend",
       orderCardComponent(
-        order.order.orderArray.pizza,
-        order.order.orderArray.amount
+        order[0].order.orderArray[i].pizza,
+        order[0].order.orderArray[i].amount
       )
     );
   }
 
   orderSummaryElement.insertAdjacentHTML(
     "beforeend",
-    orderDetailsComponent(order.name, order.address, order.phone, order.email)
+    orderDetailsComponent(
+      order[0].name,
+      order[0].address,
+      order[0].phone,
+      order[0].email
+    )
   );
 }
 
