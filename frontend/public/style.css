@@ -290,6 +290,9 @@ body .container2 .successful-order .ordered {
 body .container2 .successful-order .ordered input[type=number]::-webkit-inner-spin-button {
   cursor: url(/data/img/cursor_pizza.svg), auto;
 }
+body .container2 .successful-order .ordered .order-details {
+  width: 100%;
+}
 body .container2 .successful-order .ordered .order-card {
   font-size: 20px;
   font-family: "Quicksand", sans-serif;

@@ -1,18 +1,32 @@
 [
   {
     "name": "Tök Ödön",
-    "phone": "+36201234567",
+    "phone": "+3620000023",
     "email": "tokodon@citromail.hu",
     "address": "Budapest Hős utca",
     "order": {
       "orderArray": [
         {
           "pizza": "Margarita",
-          "amount": "1"
+          "amount": "2"
         },
         {
           "pizza": "Négysajtos",
-          "amount": "2"
+          "amount": "4"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Petruska Tamás",
+    "phone": "234234",
+    "email": "234234",
+    "address": "Budapest",
+    "order": {
+      "orderArray": [
+        {
+          "pizza": "Margarita",
+          "amount": "3"
         }
       ]
     }

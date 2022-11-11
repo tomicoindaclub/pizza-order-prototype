@@ -1,8 +1,12 @@
-const orderSummaryElement = document.querySelector(".ordered-details");
+const orderSummaryElement = document.querySelector(".ordered");
+
+// fetch function ami az orders.json-t kéri le
 
 const fetchOrder = async () => {
   return fetch("/orders").then((res) => res.json());
 };
+
+// komponensek amiket feltöltünk majd a fetch-ből kapott adatokkal
 
 const orderCardComponent = function (pizzaName, amount) {
   return `
@@ -25,16 +29,20 @@ const orderDetailsComponent = function (name, address, phone, email) {
 `;
 };
 
+// itt kezeljük le hogy a kapott adatokat megjelenítsük az oldalon
+
 async function loadEvent() {
   const order = await fetchOrder();
-  const orderItems = order[0].order.orderArray;
+  // ezzel a sorral van megoldva hogy mindig az utolsó rendelés legyen kiolvasva
+  const lastOrderIndex = order.length - 1;
+  const orderItems = order[lastOrderIndex].order.orderArray;
 
   for (let i = 0; i < orderItems.length; i++) {
     orderSummaryElement.insertAdjacentHTML(
       "beforeend",
       orderCardComponent(
-        order[0].order.orderArray[i].pizza,
-        order[0].order.orderArray[i].amount
+        order[lastOrderIndex].order.orderArray[i].pizza,
+        order[lastOrderIndex].order.orderArray[i].amount
       )
     );
   }
@@ -42,10 +50,10 @@ async function loadEvent() {
   orderSummaryElement.insertAdjacentHTML(
     "beforeend",
     orderDetailsComponent(
-      order[0].name,
-      order[0].address,
-      order[0].phone,
-      order[0].email
+      order[lastOrderIndex].name,
+      order[lastOrderIndex].address,
+      order[lastOrderIndex].phone,
+      order[lastOrderIndex].email
     )
   );
 }
