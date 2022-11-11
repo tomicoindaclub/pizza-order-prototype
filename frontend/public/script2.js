@@ -7,8 +7,8 @@ const fetchOrder = async () => {
 const orderCardComponent = function (pizzaName, amount) {
   return `
 <div class="order-card">
-    <p>${pizzaName}</p>
-    <p>${amount} db</p>
+    <p>- ${pizzaName}</p>
+    <p class="order-amount">${amount} db</p>
 </div>
 `;
 };
@@ -16,6 +16,7 @@ const orderCardComponent = function (pizzaName, amount) {
 const orderDetailsComponent = function (name, address, phone, email) {
   return `
 <div class="details-card">
+    <h2>Vásárló adatai:</h2>
     <p>${name}</p>
     <p>${address}</p>
     <p>${phone}</p>

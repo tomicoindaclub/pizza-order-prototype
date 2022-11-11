@@ -1,17 +1,18 @@
 [
   {
-    "name": "Petruska Tamás",
-    "phone": "+36209560031",
-    "email": "tamas.petruska99@gmail.com",
-    "address": "1185 Üllői út 614",
+    "name": "Tök Ödön",
+    "phone": "+36201234567",
+    "email": "tokodon@citromail.hu",
+    "address": "Budapest Hős utca",
     "order": {
       "orderArray": [
         {
           "pizza": "Margarita",
-          "amount": "3"
+          "amount": "1"
         },
         {
           "pizza": "Négysajtos",
+<<<<<<< HEAD
           "amount": "1"
         }
       ]
@@ -30,10 +31,13 @@
         },
         {
           "pizza": "Queen Margarita",
+=======
+>>>>>>> c18495fb9a19ae70bc84e7646a33c57789e170bd
           "amount": "2"
         }
       ]
     }
+<<<<<<< HEAD
   },
   {
     "name": "2",
@@ -94,5 +98,7 @@
         }
       ]
     }
+=======
+>>>>>>> c18495fb9a19ae70bc84e7646a33c57789e170bd
   }
 ]
