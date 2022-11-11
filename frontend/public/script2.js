@@ -1,4 +1,4 @@
-const orderSummaryElement = document.querySelector(".ordered");
+const orderSummaryElement = document.querySelector(".ordered-details");
 
 const fetchOrder = async () => {
   return fetch("/orders").then((res) => res.json());

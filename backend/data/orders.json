@@ -18,15 +18,15 @@
     }
   },
   {
-    "name": "Laczkó Kristóf",
-    "phone": "06301111111",
-    "email": "kristof.lacz@gmail.com",
-    "address": "utca utca 40",
+    "name": "2",
+    "phone": "2",
+    "email": "2",
+    "address": "2",
     "order": {
       "orderArray": [
         {
           "pizza": "Margarita",
-          "amount": "1"
+          "amount": "2"
         },
         {
           "pizza": "Queen Margarita",
@@ -36,37 +36,61 @@
     }
   },
   {
-    "name": "Laczkó Kristóf",
-    "phone": "06304199497",
-    "email": "kristof.lacz@gmail.com",
-    "address": "Hajdú utca 48 2.em. 32.",
+    "name": "2",
+    "phone": "2",
+    "email": "2",
+    "address": "2",
     "order": {
       "orderArray": [
         {
           "pizza": "Margarita",
-          "amount": "2"
+          "amount": "1"
+        },
+        {
+          "pizza": "Queen Margarita",
+          "amount": "1"
         },
         {
           "pizza": "Bianca Verde",
           "amount": "1"
+        },
+        {
+          "pizza": "Bianca Rosa",
+          "amount": "1"
+        },
+        {
+          "pizza": "Gombás",
+          "amount": "1"
         }
       ]
     }
   },
   {
-    "name": "Laczkó Kristóf",
-    "phone": "06304199497",
-    "email": "kristof.lacz@gmail.com",
-    "address": "Hajdú utca 48 2.em. 32.",
+    "name": "3",
+    "phone": "3",
+    "email": "3",
+    "address": "3",
     "order": {
       "orderArray": [
         {
           "pizza": "Margarita",
-          "amount": "2"
+          "amount": " "
         },
         {
           "pizza": "Queen Margarita",
-          "amount": "1"
+          "amount": " "
+        },
+        {
+          "pizza": "Bianca Verde",
+          "amount": " "
+        },
+        {
+          "pizza": "Bianca Rosa",
+          "amount": " "
+        },
+        {
+          "pizza": "Gombás",
+          "amount": " "
         }
       ]
     }
