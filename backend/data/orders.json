@@ -12,93 +12,9 @@
         },
         {
           "pizza": "Négysajtos",
-<<<<<<< HEAD
-          "amount": "1"
-        }
-      ]
-    }
-  },
-  {
-    "name": "2",
-    "phone": "2",
-    "email": "2",
-    "address": "2",
-    "order": {
-      "orderArray": [
-        {
-          "pizza": "Margarita",
-          "amount": "2"
-        },
-        {
-          "pizza": "Queen Margarita",
-=======
->>>>>>> c18495fb9a19ae70bc84e7646a33c57789e170bd
           "amount": "2"
         }
       ]
     }
-<<<<<<< HEAD
-  },
-  {
-    "name": "2",
-    "phone": "2",
-    "email": "2",
-    "address": "2",
-    "order": {
-      "orderArray": [
-        {
-          "pizza": "Margarita",
-          "amount": "1"
-        },
-        {
-          "pizza": "Queen Margarita",
-          "amount": "1"
-        },
-        {
-          "pizza": "Bianca Verde",
-          "amount": "1"
-        },
-        {
-          "pizza": "Bianca Rosa",
-          "amount": "1"
-        },
-        {
-          "pizza": "Gombás",
-          "amount": "1"
-        }
-      ]
-    }
-  },
-  {
-    "name": "3",
-    "phone": "3",
-    "email": "3",
-    "address": "3",
-    "order": {
-      "orderArray": [
-        {
-          "pizza": "Margarita",
-          "amount": " "
-        },
-        {
-          "pizza": "Queen Margarita",
-          "amount": " "
-        },
-        {
-          "pizza": "Bianca Verde",
-          "amount": " "
-        },
-        {
-          "pizza": "Bianca Rosa",
-          "amount": " "
-        },
-        {
-          "pizza": "Gombás",
-          "amount": " "
-        }
-      ]
-    }
-=======
->>>>>>> c18495fb9a19ae70bc84e7646a33c57789e170bd
   }
 ]

@@ -290,14 +290,6 @@ body .container2 .successful-order .ordered {
 body .container2 .successful-order .ordered input[type=number]::-webkit-inner-spin-button {
   cursor: url(/data/img/cursor_pizza.svg), auto;
 }
-<<<<<<< HEAD
-body .container2 .successful-order .ordered .ordered-details {
-  font-size: 150%;
-  font-family: "Quicksand", sans-serif;
-  padding: 5px;
-  width: 100%;
-  height: 95%;
-=======
 body .container2 .successful-order .ordered .order-card {
   font-size: 20px;
   font-family: "Quicksand", sans-serif;
@@ -330,5 +322,4 @@ body .container2 .successful-order .ordered .details-card {
   margin-bottom: 0.7rem;
   box-shadow: 2px 2px 2px 2px gray;
   height: 30%;
->>>>>>> c18495fb9a19ae70bc84e7646a33c57789e170bd
 }/*# sourceMappingURL=style.css.map */
