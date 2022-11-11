@@ -74,7 +74,6 @@ async function loadEvent() {
           ).textContent;
           let newAmount =
             parseInt(currentAmount.slice(0, 1)) + parseInt(orderAmount);
-          console.log(newAmount);
           return (cartItems[i].querySelector(".amount" + itemID).textContent =
             newAmount + " db");
         }

@@ -256,7 +256,7 @@ body {
   }
 
   //index2.html - STYLE
-  
+
   .container2 {
     display: flex;
     align-items: center;
@@ -268,7 +268,6 @@ body {
     input[type="number"]::-webkit-inner-spin-button {
       cursor: url(/data/img/cursor_pizza.svg), auto;
     }
-
 
     .successful-order {
       display: flex;
@@ -286,7 +285,6 @@ body {
       input[type="number"]::-webkit-inner-spin-button {
         cursor: url(/data/img/cursor_pizza.svg), auto;
       }
-
 
       h1 {
         display: flex;
@@ -317,6 +315,41 @@ body {
           cursor: url(/data/img/cursor_pizza.svg), auto;
         }
         font-family: "Quicksand", sans-serif;
+
+        .order-card {
+          font-size: 20px;
+          font-family: "Quicksand", sans-serif;
+          display: flex;
+          width: 95%;
+          flex-direction: row;
+          align-items: center;
+          background-color: lightgrey;
+          opacity: 0.9;
+          padding: 10px;
+          border-radius: 10px;
+          margin-bottom: 0.7rem;
+          box-shadow: 2px 2px 2px 2px gray;
+          height: 10%;
+
+          .order-amount {
+            padding-left: 4rem;
+          }
+        }
+        .details-card {
+          font-size: 20px;
+          font-family: "Quicksand", sans-serif;
+          display: block;
+          width: 95%;
+          flex-direction: row;
+          align-items: center;
+          background-color: lightgrey;
+          opacity: 0.9;
+          padding: 10px;
+          border-radius: 10px;
+          margin-bottom: 0.7rem;
+          box-shadow: 2px 2px 2px 2px gray;
+          height: 30%;
+        }
       }
     }
   }

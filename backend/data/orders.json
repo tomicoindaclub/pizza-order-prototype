@@ -1,72 +1,18 @@
 [
   {
-    "name": "Petruska Tamás",
-    "phone": "+36209560031",
-    "email": "tamas.petruska99@gmail.com",
-    "address": "1185 Üllői út 614",
+    "name": "Tök Ödön",
+    "phone": "+36201234567",
+    "email": "tokodon@citromail.hu",
+    "address": "Budapest Hős utca",
     "order": {
       "orderArray": [
         {
           "pizza": "Margarita",
-          "amount": "3"
+          "amount": "1"
         },
         {
           "pizza": "Négysajtos",
-          "amount": "1"
-        }
-      ]
-    }
-  },
-  {
-    "name": "Laczkó Kristóf",
-    "phone": "06301111111",
-    "email": "kristof.lacz@gmail.com",
-    "address": "utca utca 40",
-    "order": {
-      "orderArray": [
-        {
-          "pizza": "Margarita",
-          "amount": "1"
-        },
-        {
-          "pizza": "Queen Margarita",
           "amount": "2"
-        }
-      ]
-    }
-  },
-  {
-    "name": "Laczkó Kristóf",
-    "phone": "06304199497",
-    "email": "kristof.lacz@gmail.com",
-    "address": "Hajdú utca 48 2.em. 32.",
-    "order": {
-      "orderArray": [
-        {
-          "pizza": "Margarita",
-          "amount": "2"
-        },
-        {
-          "pizza": "Bianca Verde",
-          "amount": "1"
-        }
-      ]
-    }
-  },
-  {
-    "name": "Laczkó Kristóf",
-    "phone": "06304199497",
-    "email": "kristof.lacz@gmail.com",
-    "address": "Hajdú utca 48 2.em. 32.",
-    "order": {
-      "orderArray": [
-        {
-          "pizza": "Margarita",
-          "amount": "2"
-        },
-        {
-          "pizza": "Queen Margarita",
-          "amount": "1"
         }
       ]
     }

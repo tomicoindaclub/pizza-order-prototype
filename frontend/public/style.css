@@ -287,4 +287,37 @@ body .container2 .successful-order .ordered {
 }
 body .container2 .successful-order .ordered input[type=number]::-webkit-inner-spin-button {
   cursor: url(/data/img/cursor_pizza.svg), auto;
+}
+body .container2 .successful-order .ordered .order-card {
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  width: 95%;
+  flex-direction: row;
+  align-items: center;
+  background-color: lightgrey;
+  opacity: 0.9;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 0.7rem;
+  box-shadow: 2px 2px 2px 2px gray;
+  height: 10%;
+}
+body .container2 .successful-order .ordered .order-card .order-amount {
+  padding-left: 4rem;
+}
+body .container2 .successful-order .ordered .details-card {
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+  display: block;
+  width: 95%;
+  flex-direction: row;
+  align-items: center;
+  background-color: lightgrey;
+  opacity: 0.9;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 0.7rem;
+  box-shadow: 2px 2px 2px 2px gray;
+  height: 30%;
 }/*# sourceMappingURL=style.css.map */
