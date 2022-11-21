@@ -25,7 +25,6 @@ const menuComponent = function (id, pic, pizzaName, ingredients) {
         <input id="btn${id}" class="kosar-button" type="button" value="kosárba" />
     </form>
 </div>`;
-  let minAmount = document.querySelector(".quantity");
 };
 
 const orderComponent = function (id, pic, pizzaName, amount) {
@@ -96,7 +95,6 @@ async function loadEvent() {
         window.alert("Sajnáljuk, de 0 darab pizzát nem rendelhetsz!");
       } else {
         // ez a rész generálja le a rendelés listát
-
         for (let i = 0; i < menu.length; i++) {
           if (itemID === menu[i].id) {
             orderList.insertAdjacentHTML(
