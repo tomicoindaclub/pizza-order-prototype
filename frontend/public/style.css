@@ -327,7 +327,13 @@ body .container2 .successful-order .ordered .details-card {
   height: 30%;
 }
 
-.pizzalist {
+#pizzalist-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#pizzalist-container .pizzalist {
+  margin-top: 20px;
   width: 90%;
   height: 95vh;
   background-color: lightgrey;
@@ -337,7 +343,13 @@ body .container2 .successful-order .ordered .details-card {
   border-radius: 10px;
 }
 
-.orderlist {
+#orderlist-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#orderlist-container .orderlist {
+  margin-top: 20px;
   width: 90%;
   height: 95vh;
   background-color: lightgrey;

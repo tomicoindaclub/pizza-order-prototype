@@ -361,25 +361,51 @@ body {
   }
 }
 //Pizzalist style
+#pizzalist-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.pizzalist {
-  width: 90%;
-  height: 95vh;
-  background-color: lightgrey;
-  font-size: 20px;
-  font-family: "Quicksand", sans-serif;
-  box-shadow: 2px 2px 2px 2px gray;
-  border-radius: 10px;
+  .pizzalist {
+    margin-top: 20px;
+    width: 90%;
+    height: 95vh;
+    background-color: lightgrey;
+    font-size: 20px;
+    font-family: "Quicksand", sans-serif;
+    box-shadow: 2px 2px 2px 2px gray;
+    border-radius: 10px;
+
+    .pizza-card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      
+      background-color: lightgrey;
+      opacity: 0.9;
+      padding: 5px;
+      border-radius: 10px;
+      margin-bottom: 0.7rem;
+      box-shadow: 2px 2px 2px 2px gray;
+      height: 10%;
+  }
 }
 
 //Orderlist style
 
-.orderlist {
-  width: 90%;
-  height: 95vh;
-  background-color: lightgrey;
-  font-size: 20px;
-  font-family: "Quicksand", sans-serif;
-  box-shadow: 2px 2px 2px 2px gray;
-  border-radius: 10px;
+#orderlist-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .orderlist {
+    margin-top: 20px;
+    width: 90%;
+    height: 95vh;
+    background-color: lightgrey;
+    font-size: 20px;
+    font-family: "Quicksand", sans-serif;
+    box-shadow: 2px 2px 2px 2px gray;
+    border-radius: 10px;
+  }
 }
