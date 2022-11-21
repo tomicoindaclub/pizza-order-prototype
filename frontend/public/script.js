@@ -18,6 +18,7 @@ const menuComponent = function (id, pic, pizzaName, ingredients) {
             type="number"
             id="input${id}"
             name="quantity"
+            value="0"
             min="0"
             max="10"
         />
@@ -41,12 +42,6 @@ const orderComponent = function (id, pic, pizzaName, amount) {
 </div>
 `;
 };
-
-/* function noEmptyAmount(amount) {
-  if (noEmptyAmount === 0) {
-    return "be";
-  }
-} */
 
 // fetch function ami behívja a menu.json-t
 
@@ -96,19 +91,24 @@ async function loadEvent() {
         }
       }
 
-      // ez a rész generálja le a rendelés listát
+      if (parseInt(orderAmount) === 0) {
+        // ez a rész kiszűri ha 0 db-ot rendelsz
+        window.alert("Sajnáljuk, de 0 darab pizzát nem rendelhetsz!");
+      } else {
+        // ez a rész generálja le a rendelés listát
 
-      for (let i = 0; i < menu.length; i++) {
-        if (itemID === menu[i].id) {
-          orderList.insertAdjacentHTML(
-            "beforeend",
-            orderComponent(
-              menu[i].id,
-              menu[i].pic,
-              menu[i].pizzaName,
-              orderAmount
-            )
-          );
+        for (let i = 0; i < menu.length; i++) {
+          if (itemID === menu[i].id) {
+            orderList.insertAdjacentHTML(
+              "beforeend",
+              orderComponent(
+                menu[i].id,
+                menu[i].pic,
+                menu[i].pizzaName,
+                orderAmount
+              )
+            );
+          }
         }
       }
     });

@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/order-complete", (req, res) => {
-  res.sendFile(path.join(`${__dirname}/../frontend/index2.html`));
+  res.sendFile(path.join(`${__dirname}/../frontend/summary.html`));
 });
 
 app.get("/menu", (req, res) => {
