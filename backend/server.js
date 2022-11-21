@@ -11,6 +11,14 @@ app.use("/public", express.static(`${__dirname}/../frontend/public`));
 
 app.use("/data/img", express.static(`${__dirname}/../backend/data/img`));
 
+app.get("/pizzalist", (req, res) => {
+  res.sendFile(path.join(`${__dirname}/../frontend/pizzalist.html`));
+});
+
+app.get("/orderlist", (req, res) => {
+  res.sendFile(path.join(`${__dirname}/../frontend/orderlist.html`));
+});
+
 app.get("/", (req, res) => {
   res.sendFile(path.join(`${__dirname}/../frontend/index.html`));
 });

@@ -325,4 +325,24 @@ body .container2 .successful-order .ordered .details-card {
   margin-bottom: 0.7rem;
   box-shadow: 2px 2px 2px 2px gray;
   height: 30%;
+}
+
+.pizzalist {
+  width: 90%;
+  height: 95vh;
+  background-color: lightgrey;
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+  box-shadow: 2px 2px 2px 2px gray;
+  border-radius: 10px;
+}
+
+.orderlist {
+  width: 90%;
+  height: 95vh;
+  background-color: lightgrey;
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+  box-shadow: 2px 2px 2px 2px gray;
+  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */

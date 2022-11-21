@@ -24,6 +24,7 @@ const menuComponent = function (id, pic, pizzaName, ingredients) {
         <input id="btn${id}" class="kosar-button" type="button" value="kosárba" />
     </form>
 </div>`;
+  let minAmount = document.querySelector(".quantity");
 };
 
 const orderComponent = function (id, pic, pizzaName, amount) {
@@ -40,6 +41,12 @@ const orderComponent = function (id, pic, pizzaName, amount) {
 </div>
 `;
 };
+
+/* function noEmptyAmount(amount) {
+  if (noEmptyAmount === 0) {
+    return "be";
+  }
+} */
 
 // fetch function ami behívja a menu.json-t
 
