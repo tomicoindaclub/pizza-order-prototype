@@ -365,9 +365,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100vh;
 
   .pizzalist {
-    margin-top: 20px;
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
     width: 90%;
     height: 95vh;
     background-color: lightgrey;
@@ -376,36 +382,158 @@ body {
     box-shadow: 2px 2px 2px 2px gray;
     border-radius: 10px;
 
-    .pizza-card {
+    .form {
+      height: 8%;
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
       display: flex;
-      flex-direction: row;
       align-items: center;
-      
-      background-color: lightgrey;
-      opacity: 0.9;
-      padding: 5px;
-      border-radius: 10px;
-      margin-bottom: 0.7rem;
-      box-shadow: 2px 2px 2px 2px gray;
-      height: 10%;
+
+      form {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 80%;
+        width: 100%;
+
+        input {
+          border-radius: 10px;
+          height: 50%;
+          padding: 5px;
+          margin-left: 15px;
+          width: 15%;
+        }
+
+        .button {
+          color: black;
+          font-size: 100%;
+          font-weight: 500;
+          height: 80%;
+          background-color: rgb(167, 159, 159);
+          border: none;
+          border-radius: 10px;
+          font-weight: 700;
+          padding: 5px;
+          box-shadow: 1px 1px 1px 1px grey;
+          width: 10%;
+        }
+
+        .button:active {
+          transition: ease-in;
+          box-shadow: none;
+        }
+      }
+    }
   }
-}
 
-//Orderlist style
+  .pizza-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
-#orderlist-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .orderlist {
-    margin-top: 20px;
-    width: 90%;
-    height: 95vh;
     background-color: lightgrey;
-    font-size: 20px;
-    font-family: "Quicksand", sans-serif;
-    box-shadow: 2px 2px 2px 2px gray;
+    opacity: 0.9;
+    padding: 5px;
     border-radius: 10px;
+    margin-bottom: 0.7rem;
+    margin-top: 0.7rem;
+    box-shadow: 2px 2px 2px 2px gray;
+    height: 5%;
+    width: 95%;
+
+    img {
+      height: 100%;
+      margin-right: 20px;
+      width: 5%;
+      box-shadow: 2px 2px 2px 2px grey;
+      border-radius: 50%;
+    }
+
+    span {
+      width: 80%;
+      display: flex;
+
+      h2 {
+        font-size: 100%;
+        width: 95%;
+        justify-content: flex-start;
+      }
+
+      p {
+        width: 100%;
+        font-weight: 500;
+      }
+    }
+
+    .edit-button {
+      color: black;
+      font-size: 100%;
+
+      height: 80%;
+      background-color: rgb(167, 159, 159);
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      padding: 5px;
+      box-shadow: 1px 1px 1px 1px grey;
+      width: 13%;
+    }
+
+    .edit-button:active {
+      transition: ease-in;
+      box-shadow: none;
+    }
+  }
+
+  //Orderlist style - MÉG NEM MŰKÖDIK
+
+  #orderlist-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .orderlist {
+      margin-top: 20px;
+      width: 90%;
+      height: 95vh;
+      background-color: lightgrey;
+      font-size: 20px;
+      font-family: "Quicksand", sans-serif;
+      box-shadow: 2px 2px 2px 2px gray;
+      border-radius: 10px;
+
+      .order-card {
+        font-size: 20px;
+        font-family: "Quicksand", sans-serif;
+        display: flex;
+        width: 95%;
+        flex-direction: row;
+        align-items: center;
+        background-color: lightgrey;
+        opacity: 0.9;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 0.7rem;
+        box-shadow: 2px 2px 2px 2px gray;
+        height: 10%;
+      }
+
+      .details-card {
+        font-size: 20px;
+        font-family: "Quicksand", sans-serif;
+        display: flex;
+        width: 95%;
+        flex-direction: row;
+        align-items: center;
+        background-color: lightgrey;
+        opacity: 0.9;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 0.7rem;
+        box-shadow: 2px 2px 2px 2px gray;
+        height: 10%;
+      }
+    }
   }
 }

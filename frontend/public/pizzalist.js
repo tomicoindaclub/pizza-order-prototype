@@ -1,5 +1,5 @@
-const rootElement = document.querySelector("#root");
-const menuList = document.querySelector(".pizzas");
+const rootElement = document.querySelector("#pizzalist-container");
+const menuList = document.querySelector(".pizzalist");
 
 const menuComponent = function (id, pic, pizzaName, ingredients) {
   return `
