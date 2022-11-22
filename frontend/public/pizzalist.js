@@ -4,6 +4,7 @@ const menuList = document.querySelector(".pizzalist");
 const menuComponent = function (id, pic, pizzaName, ingredients) {
   return `
 <div class="pizza-card" id=${id}>
+    <p>ID: ${id}</p>
     <img src="${pic}" alt="" />
     <span>
         <h2>${pizzaName}</h2>

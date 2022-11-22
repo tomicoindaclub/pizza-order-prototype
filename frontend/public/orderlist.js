@@ -1,12 +1,12 @@
-const orderSummaryElement = document.querySelector(".orderlist-container");
+const orderSummaryElement = document.querySelector(".orderlist");
 
 const fetchOrder = async () => {
   return fetch("/orders").then((res) => res.json());
 };
 
-const orderCardComponent = function (pizzaName, amount) {
+const orderItemsComponent = function (pizzaName, amount) {
   return `
-<div class="order-card">
+<div class="order-items-card">
     <p>- ${pizzaName}</p>
     <p class="order-amount">${amount} db</p>
 </div>
@@ -15,7 +15,7 @@ const orderCardComponent = function (pizzaName, amount) {
 
 const orderDetailsComponent = function (name, address, phone, email) {
   return `
-<div class="details-card">
+<div class="order-details-card">
     <h2>Vásárló adatai:</h2>
     <p>${name}</p>
     <p>${address}</p>
@@ -25,18 +25,19 @@ const orderDetailsComponent = function (name, address, phone, email) {
 `;
 };
 
-async function loadEvent() {
+const orderCardComponent = `<div class="order-card"></div>`;
+
+async function loadOrders() {
   const orders = await fetchOrder();
 
-  for (let i = 0; i < orders.length; i++) {
-    orderSummaryElement.insertAdjacentHTML(
-      "beforeend",
-      orderCardComponent(
-        orders[i].order.orderArray[i].pizza,
-        orders[i].order.orderArray[i].amount
-      )
-    );
-    orderSummaryElement.insertAdjacentHTML(
+  orders.forEach(() => {
+    orderSummaryElement.insertAdjacentHTML("beforeend", orderCardComponent);
+  });
+
+  let orderCardsHTML = document.querySelectorAll(".order-card");
+
+  for (let i = 0; i < orderCardsHTML.length; i++) {
+    orderCardsHTML[i].insertAdjacentHTML(
       "beforeend",
       orderDetailsComponent(
         orders[i].name,
@@ -45,7 +46,15 @@ async function loadEvent() {
         orders[i].email
       )
     );
+    let orderItems = orders[i].order.orderArray;
+    for (let j = 0; j < orderItems.length; j++) {
+      console.log(orderItems);
+      orderCardsHTML[i].insertAdjacentHTML(
+        "beforeend",
+        orderItemsComponent(orderItems[j].pizza, orderItems[j].amount)
+      );
+    }
   }
 }
 
-window.addEventListener("loaded", loadEvent());
+window.addEventListener("loaded", loadOrders());
