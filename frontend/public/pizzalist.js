@@ -1,9 +1,9 @@
 const rootElement = document.querySelector("#pizzalist-container");
 const menuList = document.querySelector(".pizzalist");
 
-const menuComponent = function (id, pic, pizzaName, ingredients) {
+const activeMenuComponent = function (id, pic, pizzaName, ingredients) {
   return `
-<div class="pizza-card" id=${id}>
+<div class="pizza-card" id="${id}">
     <p>ID: ${id}</p>
     <img src="${pic}" alt="" />
     <span>
@@ -11,26 +11,31 @@ const menuComponent = function (id, pic, pizzaName, ingredients) {
             <p>${ingredients}</p>
     </span>
     <button class="edit-button" id="btn${id}">Szerkesztés</button>
+    <input type="checkbox" id="chcek-${id}" name="${pizzaName}" checked />
+    <label for="${pizzaName}">Aktív?</label>
 </div>`;
 };
 
-const activeItemComponent = function (id, pizzaName) {
+const inactiveMenuComponent = function (id, pic, pizzaName, ingredients) {
   return `
-    <input type="checkbox" id="chcek-${id}" name="${pizzaName}" checked />
+<div class="pizza-card" id="${id}">
+    <p>ID: ${id}</p>
+    <img src="${pic}" alt="" />
+    <span>
+        <h2>${pizzaName}</h2>
+            <p>${ingredients}</p>
+    </span>
+    <button class="edit-button" id="btn${id}">Szerkesztés</button>
+    <input type="checkbox" id="chcek-${id}" name="${pizzaName}" />
     <label for="${pizzaName}">Aktív?</label>
-`;
-};
-
-const inactiveItemComponent = function (id, pizzaName) {
-  return `
-    <input type="checkbox" id="chcek-${id}" name="${pizzaName}" checked />
-    <label for="${pizzaName}">Aktív?</label>
-`;
+</div>`;
 };
 
 const fetchMenu = async () => {
   return fetch("/menu").then((res) => res.json());
 };
+
+let selectedItemCard;
 
 async function loadEvent() {
   const menu = await fetchMenu();
@@ -39,38 +44,39 @@ async function loadEvent() {
     if (menu[i].isActive === true) {
       menuList.insertAdjacentHTML(
         "beforeend",
-        menuComponent(
+        activeMenuComponent(
           menu[i].id,
           menu[i].pic,
           menu[i].pizzaName,
           menu[i].ingredients
         )
-      );
-      menuList.insertAdjacentHTML(
-        "beforeend",
-        activeItemComponent(menu[i].id, menu[i].pizzaName)
       );
     } else {
       menuList.insertAdjacentHTML(
         "beforeend",
-        menuComponent(
+        inactiveMenuComponent(
           menu[i].id,
           menu[i].pic,
           menu[i].pizzaName,
           menu[i].ingredients
         )
       );
-      menuList.insertAdjacentHTML(
-        "beforeend",
-        inactiveItemComponent(menu[i].id, menu[i].pizzaName)
-      );
     }
   }
 
-  const buttons = document.querySelectorAll(".kosar-button");
+  const buttons = document.querySelectorAll(".edit-button");
   for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener("click", async () => {
+    buttons[i].addEventListener("click", function () {
       // gombokkal valahogy le kell kezelni hogy az adott pizzának ami a json-ből lekért eredmény (itt egy menu nevű tömb) hányadik eleme, majd annak az elemnek a kulcsérték-ét módosítani kell, pl gombnyomásra megváltozik annak az elemnek a HTML-je és input mezők lesznek ahová új értékeket tudunk írni és ezután visszaküldeni az új értékeket
+
+      let itemID = parseInt(this.id.substring(3));
+      let itemCards = document.querySelectorAll(".pizza-card");
+      itemCards.forEach((selected) => {
+        if (parseInt(selected.id) === itemID) {
+          selectedItemCard = selected;
+          console.log(selectedItemCard);
+        }
+      });
     });
   }
 }
