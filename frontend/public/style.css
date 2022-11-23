@@ -369,11 +369,32 @@ body .container2 .successful-order .ordered .details-card {
   margin-left: 15px;
   width: 15%;
 }
-#pizzalist-container .pizzalist .form form .button {
+#pizzalist-container .pizzalist .form form input[type=file] {
+  display: none;
+}
+#pizzalist-container .pizzalist .form form .upload-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: black;
   font-size: 100%;
   font-weight: 500;
   height: 80%;
+  background-color: rgb(167, 159, 159);
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-left: 10px;
+  padding: 10px;
+  box-shadow: 1px 1px 1px 1px grey;
+  width: 15%;
+  height: 20%;
+}
+#pizzalist-container .pizzalist .form form .button {
+  color: black;
+  font-size: 100%;
+  font-weight: 500;
+  height: 70%;
   background-color: rgb(167, 159, 159);
   border: none;
   border-radius: 10px;
@@ -390,6 +411,7 @@ body .container2 .successful-order .ordered .details-card {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: flex-start;
   background-color: lightgrey;
   opacity: 0.9;
   padding: 5px;
@@ -403,26 +425,28 @@ body .container2 .successful-order .ordered .details-card {
 #pizzalist-container .pizza-card img {
   height: 100%;
   margin-right: 20px;
-  width: 5%;
+  width: 3%;
+  margin-left: 10px;
   box-shadow: 2px 2px 2px 2px grey;
   border-radius: 50%;
 }
 #pizzalist-container .pizza-card span {
-  width: 80%;
+  width: 65%;
   display: flex;
 }
 #pizzalist-container .pizza-card span h2 {
   font-size: 100%;
-  width: 95%;
+  width: 30%;
   justify-content: flex-start;
 }
 #pizzalist-container .pizza-card span p {
-  width: 100%;
   font-weight: 500;
+  width: 70%;
 }
 #pizzalist-container .pizza-card .edit-button {
   color: black;
   font-size: 100%;
+  margin-right: 20px;
   height: 80%;
   background-color: rgb(167, 159, 159);
   border: none;
@@ -430,18 +454,23 @@ body .container2 .successful-order .ordered .details-card {
   font-weight: 700;
   padding: 5px;
   box-shadow: 1px 1px 1px 1px grey;
-  width: 13%;
+  width: 17%;
 }
 #pizzalist-container .pizza-card .edit-button:active {
   transition: ease-in;
   box-shadow: none;
+  width: 10%;
 }
-#pizzalist-container #orderlist-container {
+
+.orderlist-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#pizzalist-container #orderlist-container .orderlist {
+.orderlist-container .orderlist {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   margin-top: 20px;
   width: 90%;
   height: 95vh;
@@ -451,33 +480,48 @@ body .container2 .successful-order .ordered .details-card {
   box-shadow: 2px 2px 2px 2px gray;
   border-radius: 10px;
 }
-#pizzalist-container #orderlist-container .orderlist .order-card {
+.orderlist-container .orderlist .order-card {
+  margin-top: 20px;
+  width: 90%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(151, 149, 149);
+  box-shadow: 2px 2px 2px 2px gray;
+  padding: 5px;
+  border-radius: 10px;
+}
+.orderlist-container .orderlist .order-card .order-items-card {
+  justify-content: space-between;
   font-size: 20px;
   font-family: "Quicksand", sans-serif;
   display: flex;
-  width: 95%;
+  width: 25%;
   flex-direction: row;
   align-items: center;
-  background-color: lightgrey;
+  background-color: white;
   opacity: 0.9;
-  padding: 10px;
   border-radius: 10px;
   margin-bottom: 0.7rem;
   box-shadow: 2px 2px 2px 2px gray;
-  height: 10%;
+  height: 50%;
+  padding: 15px;
 }
-#pizzalist-container #orderlist-container .orderlist .details-card {
+.orderlist-container .orderlist .order-card .order-details-card {
+  justify-content: space-between;
   font-size: 20px;
   font-family: "Quicksand", sans-serif;
   display: flex;
   width: 95%;
   flex-direction: row;
   align-items: center;
-  background-color: lightgrey;
+  background-color: white;
   opacity: 0.9;
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 0.7rem;
+  padding: 15px;
   box-shadow: 2px 2px 2px 2px gray;
   height: 10%;
 }/*# sourceMappingURL=style.css.map */

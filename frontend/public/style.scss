@@ -360,6 +360,7 @@ body {
     }
   }
 }
+
 //Pizzalist style
 #pizzalist-container {
   display: flex;
@@ -405,11 +406,34 @@ body {
           width: 15%;
         }
 
-        .button {
+        input[type="file"] {
+          display: none;
+        }
+
+        .upload-button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
           color: black;
           font-size: 100%;
           font-weight: 500;
           height: 80%;
+          background-color: rgb(167, 159, 159);
+          border: none;
+          border-radius: 10px;
+          font-weight: 700;
+          margin-left: 10px;
+          padding: 10px;
+          box-shadow: 1px 1px 1px 1px grey;
+          width: 15%;
+          height: 20%;
+        }
+
+        .button {
+          color: black;
+          font-size: 100%;
+          font-weight: 500;
+          height: 70%;
           background-color: rgb(167, 159, 159);
           border: none;
           border-radius: 10px;
@@ -431,7 +455,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-
+    justify-content: flex-start;
     background-color: lightgrey;
     opacity: 0.9;
     padding: 5px;
@@ -445,31 +469,33 @@ body {
     img {
       height: 100%;
       margin-right: 20px;
-      width: 5%;
+      width: 3%;
+      margin-left: 10px;
       box-shadow: 2px 2px 2px 2px grey;
       border-radius: 50%;
     }
 
     span {
-      width: 80%;
+      width: 65%;
       display: flex;
 
       h2 {
         font-size: 100%;
-        width: 95%;
+        width: 30%;
+
         justify-content: flex-start;
       }
 
       p {
-        width: 100%;
         font-weight: 500;
+        width: 70%;
       }
     }
 
     .edit-button {
       color: black;
       font-size: 100%;
-
+      margin-right: 20px;
       height: 80%;
       background-color: rgb(167, 159, 159);
       border: none;
@@ -477,60 +503,80 @@ body {
       font-weight: 700;
       padding: 5px;
       box-shadow: 1px 1px 1px 1px grey;
-      width: 13%;
+      width: 17%;
     }
 
     .edit-button:active {
       transition: ease-in;
       box-shadow: none;
+      width: 10%;
     }
   }
+}
 
-  //Orderlist style - MÉG NEM MŰKÖDIK
+//Orderlist style - MÉG NEM MŰKÖDIK
+.orderlist-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  #orderlist-container {
+  .orderlist {
     display: flex;
-    justify-content: center;
     align-items: center;
 
-    .orderlist {
+    flex-direction: column;
+    margin-top: 20px;
+    width: 90%;
+    height: 95vh;
+    background-color: lightgrey;
+    font-size: 20px;
+    font-family: "Quicksand", sans-serif;
+    box-shadow: 2px 2px 2px 2px gray;
+    border-radius: 10px;
+
+    .order-card {
       margin-top: 20px;
       width: 90%;
-      height: 95vh;
-      background-color: lightgrey;
-      font-size: 20px;
-      font-family: "Quicksand", sans-serif;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      background-color: rgb(151, 149, 149);
       box-shadow: 2px 2px 2px 2px gray;
+      padding: 5px;
       border-radius: 10px;
 
-      .order-card {
+      .order-items-card {
+        justify-content: space-between;
         font-size: 20px;
         font-family: "Quicksand", sans-serif;
         display: flex;
-        width: 95%;
+        width: 25%;
         flex-direction: row;
         align-items: center;
-        background-color: lightgrey;
+        background-color: white;
         opacity: 0.9;
-        padding: 10px;
         border-radius: 10px;
         margin-bottom: 0.7rem;
         box-shadow: 2px 2px 2px 2px gray;
-        height: 10%;
+        height: 50%;
+        padding: 15px;
       }
 
-      .details-card {
+      .order-details-card {
+        justify-content: space-between;
         font-size: 20px;
         font-family: "Quicksand", sans-serif;
         display: flex;
         width: 95%;
         flex-direction: row;
         align-items: center;
-        background-color: lightgrey;
+        background-color: white;
         opacity: 0.9;
         padding: 10px;
         border-radius: 10px;
         margin-bottom: 0.7rem;
+        padding: 15px;
         box-shadow: 2px 2px 2px 2px gray;
         height: 10%;
       }
