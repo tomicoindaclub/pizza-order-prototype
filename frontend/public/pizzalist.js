@@ -11,7 +11,9 @@ const activeMenuComponent = function (id, pic, pizzaName, ingredients) {
             <p>${ingredients}</p>
     </span>
     <button class="edit-button" id="btn${id}">Szerkesztés</button>
+    <button class="delete-button" id="delete${id}">Törlés</button>
     <input type="checkbox" id="chcek-${id}" name="${pizzaName}" checked />
+    
     <label for="${pizzaName}">Aktív?</label>
 </div>`;
 };
@@ -26,6 +28,7 @@ const inactiveMenuComponent = function (id, pic, pizzaName, ingredients) {
               <p>${ingredients}</p>
       </span>
       <button class="edit-button" id="btn${id}">Szerkesztés</button>
+      <button class="delete-button" id="delete${id}">Törlés</button>
       <input type="checkbox" id="chcek-${id}" name="${pizzaName}" />
       <label for="${pizzaName}">Aktív?</label>
   </div>`;
@@ -33,7 +36,6 @@ const inactiveMenuComponent = function (id, pic, pizzaName, ingredients) {
 
 const editedMenuComponent = function (id, pizzaName, ingredients) {
   return `
-  <div class="pizza-card" id="${id}">
      <div class="form">
           <form action="">
             <input type="text" name="id"  value="${id}"/>
@@ -45,10 +47,8 @@ const editedMenuComponent = function (id, pizzaName, ingredients) {
             </label>
             <input type="file" name="pic" />
           </form>
-      <button class="delete-button" id="delete${id}">delete</button>
       <input type="checkbox" id="chcek-${id}" name="${pizzaName}" />
-      <label for="${pizzaName}">Aktív?</label>
-  </div>`;
+      <label for="${pizzaName}">Aktív?</label> `;
 };
 
 const fetchMenu = async () => {
@@ -98,17 +98,12 @@ async function loadEvent() {
       });
 
       menuItems = await fetchMenu();
-
-      console.log(selectedItemCard);
-
       menuItems.forEach((editedItem) => {
         if (parseInt(editedItem.id) === itemID) {
-          selectedItemCard.innerHTML(
-            editedMenuComponent(
-              editedItem.id,
-              editedItem.pizzaName,
-              editedItem.ingredients
-            )
+          selectedItemCard.innerHTML = editedMenuComponent(
+            editedItem.id,
+            editedItem.pizzaName,
+            editedItem.ingredients
           );
         }
       });

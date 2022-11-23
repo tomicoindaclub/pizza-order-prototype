@@ -77,3 +77,45 @@ app.post("/order-pizza", (req, res) => {
     }
   });
 });
+
+app.post("/add-pizza", (req, res) => {
+  if (!req.files || Object.keys(req.files).length === 0) {
+    return res.status(400).send("No files were uploaded.");
+  }
+
+  const newPizzaImg = req.files.image;
+  const newPizzaData = {
+    isActive: true,
+    id: req.body.id,
+    pizzaName: req.body.pizzaName,
+    ingredients: req.body.ingredients,
+    pic: `/data/img/${newPizzaImg}`,
+  };
+
+  newPizzaImg.mv(`${__dirname}/data/img/${newPizzaImg.name}`, (err) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+
+  fs.readFile(`${__dirname}/menu.json`, (err, data) => {
+    if (err) {
+      console.log(err);
+    } else {
+      let menuData = JSON.parse(data);
+      menuData.push(newPizzaData);
+
+      fs.writeFile(
+        `${__dirname}/images.json`,
+        JSON.stringify(menuData, null, 4),
+        (error) => {
+          if (error) {
+            console.log(error);
+          } else {
+            return res.json(newPizzaData);
+          }
+        }
+      );
+    }
+  });
+});
