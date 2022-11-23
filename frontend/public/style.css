@@ -336,6 +336,7 @@ body .container2 .successful-order .ordered .details-card {
 }
 #pizzalist-container .pizzalist {
   display: flex;
+  overflow-y: auto;
   align-items: center;
   flex-direction: column;
   margin-top: 10px;
@@ -470,6 +471,7 @@ body .container2 .successful-order .ordered .details-card {
 .orderlist-container .orderlist {
   display: flex;
   align-items: center;
+  overflow-y: auto;
   flex-direction: column;
   margin-top: 20px;
   width: 90%;
@@ -479,6 +481,7 @@ body .container2 .successful-order .ordered .details-card {
   font-family: "Quicksand", sans-serif;
   box-shadow: 2px 2px 2px 2px gray;
   border-radius: 10px;
+  padding: 10px;
 }
 .orderlist-container .orderlist .order-card {
   margin-top: 20px;
@@ -491,6 +494,7 @@ body .container2 .successful-order .ordered .details-card {
   box-shadow: 2px 2px 2px 2px gray;
   padding: 5px;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 .orderlist-container .orderlist .order-card .order-items-card {
   justify-content: space-between;
@@ -506,7 +510,7 @@ body .container2 .successful-order .ordered .details-card {
   margin-bottom: 0.7rem;
   box-shadow: 2px 2px 2px 2px gray;
   height: 50%;
-  padding: 15px;
+  padding: 10px;
 }
 .orderlist-container .orderlist .order-card .order-details-card {
   justify-content: space-between;
@@ -521,7 +525,7 @@ body .container2 .successful-order .ordered .details-card {
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 0.7rem;
-  padding: 15px;
   box-shadow: 2px 2px 2px 2px gray;
   height: 10%;
+  padding: 10px;
 }/*# sourceMappingURL=style.css.map */
