@@ -2,8 +2,11 @@ const express = require("express");
 const fs = require("fs");
 const app = express();
 const path = require("path");
+const fileUpload = require("express-fileupload");
 
 app.use(express.json());
+
+app.use(fileUpload());
 
 app.listen(9000, (_) => console.log("127.0.0.1:9000"));
 
@@ -98,7 +101,7 @@ app.post("/add-pizza", (req, res) => {
     }
   });
 
-  fs.readFile(`${__dirname}/menu.json`, (err, data) => {
+  fs.readFile(`${__dirname}/data/menu.json`, (err, data) => {
     if (err) {
       console.log(err);
     } else {
@@ -106,11 +109,11 @@ app.post("/add-pizza", (req, res) => {
       menuData.push(newPizzaData);
 
       fs.writeFile(
-        `${__dirname}/images.json`,
+        `${__dirname}/data/menu.json`,
         JSON.stringify(menuData, null, 4),
-        (error) => {
-          if (error) {
-            console.log(error);
+        (err) => {
+          if (err) {
+            console.log(err);
           } else {
             return res.json(newPizzaData);
           }

@@ -47,7 +47,8 @@ const editedMenuComponent = function (id, pizzaName, ingredients) {
             </label>
             <input type="file" name="pic" />
           </form>
-      <input type="checkbox" id="chcek-${id}" name="${pizzaName}" />
+      <button class="save-button" id="save${id}">Mentés</button>
+      <input type="checkbox" id="check-${id}" name="${pizzaName}" />
       <label for="${pizzaName}">Aktív?</label> `;
 };
 
@@ -135,5 +136,5 @@ formElement.addEventListener("submit", (event) => {
   fetch("/add-pizza", {
     method: "POST",
     body: formData,
-  }).then(window.location.reload());
+  }).then();
 });
