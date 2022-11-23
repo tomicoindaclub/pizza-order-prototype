@@ -30,5 +30,37 @@
         }
       ]
     }
+  },
+  {
+    "name": "Kiss Pál",
+    "phone": "+36705460023",
+    "email": "kisspal@citromail.hu",
+    "address": "Borsod",
+    "order": {
+      "orderArray": [
+        {
+          "pizza": "Margarita",
+          "amount": "3"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Marek",
+    "phone": "12365478",
+    "email": "qdwdV@jufeufv.hu",
+    "address": "banglades",
+    "order": {
+      "orderArray": [
+        {
+          "pizza": "Queen Margarita",
+          "amount": "2"
+        },
+        {
+          "pizza": "Bianca Verde",
+          "amount": "4"
+        }
+      ]
+    }
   }
 ]

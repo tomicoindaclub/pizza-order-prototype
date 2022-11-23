@@ -371,7 +371,7 @@ body {
 
   .pizzalist {
     display: flex;
-
+    overflow-y: auto;
     align-items: center;
     flex-direction: column;
     margin-top: 10px;
@@ -523,7 +523,7 @@ body {
   .orderlist {
     display: flex;
     align-items: center;
-
+    overflow-y: auto;
     flex-direction: column;
     margin-top: 20px;
     width: 90%;
@@ -533,6 +533,8 @@ body {
     font-family: "Quicksand", sans-serif;
     box-shadow: 2px 2px 2px 2px gray;
     border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
 
     .order-card {
       margin-top: 20px;
@@ -545,6 +547,7 @@ body {
       box-shadow: 2px 2px 2px 2px gray;
       padding: 5px;
       border-radius: 10px;
+      margin-bottom: 20px;
 
       .order-items-card {
         justify-content: space-between;
