@@ -46,9 +46,10 @@ async function loadOrders() {
         orders[i].email
       )
     );
+
     let orderItems = orders[i].order.orderArray;
+
     for (let j = 0; j < orderItems.length; j++) {
-      console.log(orderItems);
       orderCardsHTML[i].insertAdjacentHTML(
         "beforeend",
         orderItemsComponent(orderItems[j].pizza, orderItems[j].amount)

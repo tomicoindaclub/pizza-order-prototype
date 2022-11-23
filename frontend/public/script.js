@@ -51,18 +51,20 @@ const fetchMenu = async () => {
 async function loadEvent() {
   const menu = await fetchMenu();
 
-  // fetchből feltöltjük a menü listát
+  // fetchből feltöltjük a menü listát amiben csak active status-al rendelkező elemek lesznek
 
   for (let i = 0; i < menu.length; i++) {
-    menuList.insertAdjacentHTML(
-      "beforeend",
-      menuComponent(
-        menu[i].id,
-        menu[i].pic,
-        menu[i].pizzaName,
-        menu[i].ingredients
-      )
-    );
+    if (menu[i].isActive === true) {
+      menuList.insertAdjacentHTML(
+        "beforeend",
+        menuComponent(
+          menu[i].id,
+          menu[i].pic,
+          menu[i].pizzaName,
+          menu[i].ingredients
+        )
+      );
+    }
   }
 
   // menü gombjainak lekezelése

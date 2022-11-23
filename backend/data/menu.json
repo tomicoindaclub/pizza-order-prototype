@@ -1,41 +1,48 @@
 [
   {
+    "isActive": true,
     "id": 1,
     "pizzaName": "Margarita",
     "ingredients": "paradicsomszósz, sajt, bazsalikom.",
     "pic": "/data/img/margherita.png"
   },
   {
+    "isActive": true,
     "id": 2,
     "pizzaName": "Queen Margarita",
     "ingredients": "paradicsomszósz, sajt, zöldfűszerek, paprika.",
     "pic": "/data/img/queen_maragherita.png"
   },
   {
+    "isActive": true,
     "id": 3,
     "pizzaName": "Bianca Verde",
     "ingredients": "paradicsomszósz, sajt, zöldfűszerek, paprika.",
     "pic": "/data/img/bianca_verde.png"
   },
   {
+    "isActive": true,
     "id": 4,
     "pizzaName": "Bianca Rosa",
     "ingredients": "olivaolaj, spenót, parmezán, koktélparadicsom, tejföl.",
     "pic": "/data/img/bianca_rosa.png"
   },
   {
+    "isActive": true,
     "id": 5,
     "pizzaName": "Gombás",
     "ingredients": "paradicsomszósz, sajt, gomba, tejföl.",
     "pic": "/data/img/mashroom.png"
   },
   {
+    "isActive": true,
     "id": 6,
     "pizzaName": "Négysajtos",
     "ingredients": "paradicsomszósz, kéksajt, ricotta, parmezán, mozzarella.",
     "pic": "/data/img/negysajtos.png"
   },
   {
+    "isActive": false,
     "id": 7,
     "pizzaName": "Kolbászos",
     "ingredients": "paradicsomszósz, kolbász, hagyma, bazsalikom.",

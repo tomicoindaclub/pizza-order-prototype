@@ -14,6 +14,20 @@ const menuComponent = function (id, pic, pizzaName, ingredients) {
 </div>`;
 };
 
+const activeItemComponent = function (id, pizzaName) {
+  return `
+    <input type="checkbox" id="chcek-${id}" name="${pizzaName}" checked />
+    <label for="${pizzaName}">Aktív?</label>
+`;
+};
+
+const inactiveItemComponent = function (id, pizzaName) {
+  return `
+    <input type="checkbox" id="chcek-${id}" name="${pizzaName}" checked />
+    <label for="${pizzaName}">Aktív?</label>
+`;
+};
+
 const fetchMenu = async () => {
   return fetch("/menu").then((res) => res.json());
 };
@@ -22,15 +36,35 @@ async function loadEvent() {
   const menu = await fetchMenu();
 
   for (let i = 0; i < menu.length; i++) {
-    menuList.insertAdjacentHTML(
-      "beforeend",
-      menuComponent(
-        menu[i].id,
-        menu[i].pic,
-        menu[i].pizzaName,
-        menu[i].ingredients
-      )
-    );
+    if (menu[i].isActive === true) {
+      menuList.insertAdjacentHTML(
+        "beforeend",
+        menuComponent(
+          menu[i].id,
+          menu[i].pic,
+          menu[i].pizzaName,
+          menu[i].ingredients
+        )
+      );
+      menuList.insertAdjacentHTML(
+        "beforeend",
+        activeItemComponent(menu[i].id, menu[i].pizzaName)
+      );
+    } else {
+      menuList.insertAdjacentHTML(
+        "beforeend",
+        menuComponent(
+          menu[i].id,
+          menu[i].pic,
+          menu[i].pizzaName,
+          menu[i].ingredients
+        )
+      );
+      menuList.insertAdjacentHTML(
+        "beforeend",
+        inactiveItemComponent(menu[i].id, menu[i].pizzaName)
+      );
+    }
   }
 
   const buttons = document.querySelectorAll(".kosar-button");
