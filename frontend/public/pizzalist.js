@@ -12,10 +12,12 @@ const activeMenuComponent = function (id, pic, pizzaName, ingredients) {
     </span>
     <button class="edit-button" id="btn${id}">Szerkesztés</button>
     <button class="delete-button" id="delete${id}">Törlés</button>
-    <input type="checkbox" id="chcek-${id}" name="${pizzaName}" checked />
+    <div class="checkbox-div">
+      <input  class="checkbox" type="checkbox" id="chcek-${id}" name="${pizzaName}" checked />
     
-    <label for="${pizzaName}">Aktív?</label>
-</div>`;
+      <label class="checkbox-label" for="${pizzaName}">Aktív</label>
+    </div>
+  </div>`;
 };
 
 const inactiveMenuComponent = function (id, pic, pizzaName, ingredients) {

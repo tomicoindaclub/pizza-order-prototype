@@ -32,10 +32,11 @@ body .container {
 body .container .list-box {
   background-color: white;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: stretch;
   flex-direction: row;
-  width: 45%;
+  overflow-y: auto;
+  width: 50%;
   height: 100%;
   border-radius: 10px;
   opacity: 0.8;
@@ -44,13 +45,14 @@ body .container .list-box {
 body .container .list-box .pizzas {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 95%;
+  overflow-y: auto;
+  width: 90%;
 }
 body .container .list-box .pizzas .pizza-lap {
   color: black;
   display: flex;
   font-size: 200%;
+  align-items: flex-start;
   background-color: lightgrey;
   opacity: 0.9;
   padding: 1px;
@@ -65,14 +67,17 @@ body .container .list-box .pizzas .pizza-lap {
 body .container .list-box .pizzas .pizza-card {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   background-color: lightgrey;
   opacity: 0.9;
   padding: 5px;
   border-radius: 10px;
-  margin-bottom: 0.7rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.3rem;
+  margin-right: 5px;
+  margin-left: 5px;
   box-shadow: 2px 2px 2px 2px gray;
-  height: 10%;
+  height: 11%;
 }
 body .container .list-box .pizzas .pizza-card img {
   height: 100%;
@@ -87,6 +92,7 @@ body .container .list-box .pizzas .pizza-card span {
 body .container .list-box .pizzas .pizza-card span p {
   width: 100%;
   font-weight: 700;
+  margin-bottom: 5px;
 }
 body .container .list-box .pizzas .pizza-card form {
   display: flex;
@@ -149,6 +155,7 @@ body .container .order-box .ordered-pizzas {
   display: flex;
   height: 60%;
   flex-direction: column;
+  overflow-y: auto;
   align-items: center;
   background-color: lightgray;
   opacity: 0.9;
@@ -276,6 +283,7 @@ body .container2 .successful-order .ordered {
   display: flex;
   height: 60%;
   flex-direction: column;
+  overflow-y: auto;
   align-items: flex-start;
   justify-content: flex-start;
   background-color: white;
@@ -324,7 +332,7 @@ body .container2 .successful-order .ordered .details-card {
   border-radius: 10px;
   margin-bottom: 0.7rem;
   box-shadow: 2px 2px 2px 2px gray;
-  height: 30%;
+  height: 400px;
 }
 
 #pizzalist-container {
@@ -408,7 +416,7 @@ body .container2 .successful-order .ordered .details-card {
   transition: ease-in;
   box-shadow: none;
 }
-#pizzalist-container .pizza-card {
+#pizzalist-container .pizzalist .pizza-card {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -420,10 +428,10 @@ body .container2 .successful-order .ordered .details-card {
   margin-bottom: 0.7rem;
   margin-top: 0.7rem;
   box-shadow: 2px 2px 2px 2px gray;
-  height: 5%;
+  height: 15%;
   width: 95%;
 }
-#pizzalist-container .pizza-card img {
+#pizzalist-container .pizzalist .pizza-card img {
   height: 100%;
   margin-right: 20px;
   width: 3%;
@@ -431,24 +439,25 @@ body .container2 .successful-order .ordered .details-card {
   box-shadow: 2px 2px 2px 2px grey;
   border-radius: 50%;
 }
-#pizzalist-container .pizza-card span {
+#pizzalist-container .pizzalist .pizza-card span {
   width: 65%;
   display: flex;
+  align-items: center;
+  margin-left: 10px;
 }
-#pizzalist-container .pizza-card span h2 {
+#pizzalist-container .pizzalist .pizza-card span h2 {
   font-size: 100%;
   width: 30%;
-  justify-content: flex-start;
 }
-#pizzalist-container .pizza-card span p {
+#pizzalist-container .pizzalist .pizza-card span p {
   font-weight: 500;
   width: 70%;
 }
-#pizzalist-container .pizza-card .edit-button {
+#pizzalist-container .pizzalist .pizza-card .edit-button {
   color: black;
   font-size: 100%;
   margin-right: 20px;
-  height: 80%;
+  height: 95%;
   background-color: rgb(167, 159, 159);
   border: none;
   border-radius: 10px;
@@ -457,10 +466,53 @@ body .container2 .successful-order .ordered .details-card {
   box-shadow: 1px 1px 1px 1px grey;
   width: 17%;
 }
-#pizzalist-container .pizza-card .edit-button:active {
+#pizzalist-container .pizzalist .pizza-card .edit-button:active {
   transition: ease-in;
   box-shadow: none;
   width: 10%;
+}
+#pizzalist-container .pizzalist .pizza-card .delete-button {
+  color: black;
+  font-size: 100%;
+  margin-right: 20px;
+  height: 95%;
+  background-color: rgb(167, 159, 159);
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 5px;
+  box-shadow: 1px 1px 1px 1px grey;
+  width: 10%;
+}
+#pizzalist-container .pizzalist .pizza-card .checkbox-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+  font-size: 100%;
+  margin-left: 10px;
+  height: 70%;
+  background-color: rgb(167, 159, 159);
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 5px;
+  box-shadow: 1px 1px 1px 1px grey;
+  width: 10%;
+}
+#pizzalist-container .pizzalist .pizza-card .checkbox-div .checkbox {
+  color: black;
+  font-size: 100%;
+  height: 80%;
+  background-color: rgb(167, 159, 159);
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 5px;
+  width: 30%;
+}
+#pizzalist-container .pizzalist .pizza-card .checkbox-div .check-box-label {
+  width: 70%;
 }
 
 .orderlist-container {
@@ -507,7 +559,7 @@ body .container2 .successful-order .ordered .details-card {
   background-color: white;
   opacity: 0.9;
   border-radius: 10px;
-  margin-bottom: 0.7rem;
+  margin-bottom: 10px;
   box-shadow: 2px 2px 2px 2px gray;
   height: 50%;
   padding: 10px;
@@ -524,7 +576,7 @@ body .container2 .successful-order .ordered .details-card {
   opacity: 0.9;
   padding: 10px;
   border-radius: 10px;
-  margin-bottom: 0.7rem;
+  margin-bottom: 10px;
   box-shadow: 2px 2px 2px 2px gray;
   height: 10%;
   padding: 10px;

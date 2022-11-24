@@ -42,7 +42,7 @@
     "pic": "/data/img/negysajtos.png"
   },
   {
-    "isActive": false,
+    "isActive": true,
     "id": 7,
     "pizzaName": "Kolbászos",
     "ingredients": "paradicsomszósz, kolbász, hagyma, bazsalikom.",

@@ -62,5 +62,43 @@
         }
       ]
     }
+  },
+  {
+    "name": "xwx",
+    "phone": "xedxed",
+    "email": "xededxe",
+    "address": "dxed",
+    "order": {
+      "orderArray": [
+        {
+          "pizza": "Bianca Rosa",
+          "amount": "7"
+        },
+        {
+          "pizza": "Bianca Verde",
+          "amount": "4"
+        },
+        {
+          "pizza": "Queen Margarita",
+          "amount": "6"
+        },
+        {
+          "pizza": "Margarita",
+          "amount": "3"
+        },
+        {
+          "pizza": "Gombás",
+          "amount": "9"
+        },
+        {
+          "pizza": "Négysajtos",
+          "amount": "8"
+        },
+        {
+          "pizza": "Kolbászos",
+          "amount": "7"
+        }
+      ]
+    }
   }
 ]
