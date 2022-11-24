@@ -31,8 +31,10 @@ const inactiveMenuComponent = function (id, pic, pizzaName, ingredients) {
       </span>
       <button class="edit-button" id="btn${id}">Szerkesztés</button>
       <button class="delete-button" id="delete${id}">Törlés</button>
-      <input type="checkbox" id="chcek-${id}" name="${pizzaName}" />
-      <label for="${pizzaName}">Aktív?</label>
+      <div class="checkbox-div">
+      <input class="checkbox" type="checkbox" id="chcek-${id}" name="${pizzaName}" />
+      <label class="checkbox-label" for="${pizzaName}">Aktív</label>
+      </div>
   </div>`;
 };
 

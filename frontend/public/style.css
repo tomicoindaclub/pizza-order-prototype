@@ -45,7 +45,6 @@ body .container .list-box {
 body .container .list-box .pizzas {
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
   width: 90%;
 }
 body .container .list-box .pizzas .pizza-lap {
@@ -403,12 +402,11 @@ body .container2 .successful-order .ordered .details-card {
   color: black;
   font-size: 100%;
   font-weight: 500;
-  height: 70%;
+  height: 80%;
   background-color: rgb(167, 159, 159);
   border: none;
   border-radius: 10px;
   font-weight: 700;
-  padding: 5px;
   box-shadow: 1px 1px 1px 1px grey;
   width: 10%;
 }
