@@ -4,7 +4,7 @@
     "id": 1,
     "pizzaName": "Margarita",
     "ingredients": "paradicsomszósz, sajt, bazsalikom.",
-    "pic": "/data/img/margherita.ppg"
+    "pic": "/data/img/margherita.png"
   },
   {
     "isActive": true,
