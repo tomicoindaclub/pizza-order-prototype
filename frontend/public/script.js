@@ -38,9 +38,12 @@ const orderComponent = function (id, pic, pizzaName, amount) {
     <form>
         <h2 class="amount${id}">${amount} db</h2>
     </form>
+    <button class="delete-item">X</button>
 </div>
 `;
 };
+
+// const deteteItem = document.querySelector(".delete-item");
 
 // fetch function ami behívja a menu.json-t
 
@@ -105,7 +108,8 @@ async function loadEvent() {
                 menu[i].id,
                 menu[i].pic,
                 menu[i].pizzaName,
-                orderAmount
+                orderAmount,
+                deteteItem
               )
             );
           }
@@ -143,6 +147,10 @@ orderButton.addEventListener("click", function () {
     orderArray.push(itemArray);
   }
   orderItems.forEach(itemSort);
+
+  /* deteteItem.addEventListener("click", function () {
+    itemArray.remove;
+  }); */
 
   // itt tároljuk el az egész rendelést
 

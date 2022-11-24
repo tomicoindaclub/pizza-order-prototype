@@ -168,6 +168,7 @@ body .container .order-box .ordered-pizzas .order-pizza-card {
   display: flex;
   width: 95%;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   background-color: lightgrey;
   opacity: 0.9;
@@ -185,7 +186,7 @@ body .container .order-box .ordered-pizzas .order-pizza-card img {
   border-radius: 50%;
 }
 body .container .order-box .ordered-pizzas .order-pizza-card span {
-  width: 60%;
+  width: 50%;
   flex-direction: row;
   justify-content: flex-start;
 }
@@ -200,10 +201,24 @@ body .container .order-box .ordered-pizzas .order-pizza-card span p {
   font-weight: 400;
 }
 body .container .order-box .ordered-pizzas .order-pizza-card form {
-  width: 32%;
+  width: 20%;
 }
 body .container .order-box .ordered-pizzas .order-pizza-card form h2 {
   width: 100%;
+}
+body .container .order-box .ordered-pizzas .order-pizza-card .delete-item {
+  font-size: 200%;
+  width: 8%;
+  font-weight: bolder;
+  border: none;
+  background-color: white;
+  color: red;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px grey;
+}
+body .container .order-box .ordered-pizzas .order-pizza-card .delete-item:active {
+  transition: ease-in;
+  box-shadow: none;
 }
 body .container .order-box .details {
   display: flex;
