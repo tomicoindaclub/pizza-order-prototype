@@ -529,6 +529,12 @@ body .container2 .successful-order .ordered .details-card {
   height: 100%;
   width: 100%;
 }
+#pizzalist-container .pizzalist .pizza-card .pizza-card-edit .edit-form {
+  width: 93%;
+}
+#pizzalist-container .pizzalist .pizza-card .pizza-card-edit .edit-form .id-input {
+  width: 3%;
+}
 #pizzalist-container .pizzalist .pizza-card .pizza-card-edit form {
   align-items: center;
   display: flex;
@@ -538,13 +544,14 @@ body .container2 .successful-order .ordered .details-card {
 }
 #pizzalist-container .pizzalist .pizza-card .pizza-card-edit form input[type=submit] {
   display: none;
+  margin-right: 10px;
 }
 #pizzalist-container .pizzalist .pizza-card .pizza-card-edit form input {
   border-radius: 10px;
   height: 30%;
   padding: 5px;
   margin-left: 15px;
-  width: 20%;
+  width: 28%;
 }
 #pizzalist-container .pizzalist .pizza-card .pizza-card-edit form .upload-button {
   display: flex;
@@ -553,25 +560,26 @@ body .container2 .successful-order .ordered .details-card {
   color: black;
   font-size: 100%;
   font-weight: 500;
-  height: 30%;
+  height: 50%;
   background-color: rgb(167, 159, 159);
   border: none;
   border-radius: 10px;
   font-weight: 700;
-  margin-left: 10px;
+  margin-right: 5px;
+  margin-left: 32px;
   padding: 5px;
   box-shadow: 1px 1px 1px 1px grey;
-  width: 20%;
+  width: 15%;
 }
 #pizzalist-container .pizzalist .pizza-card .pizza-card-edit form .upload-button:active {
   transition: ease-in;
   box-shadow: none;
 }
-#pizzalist-container .pizzalist .pizza-card .pizza-card-edit .save-button {
+#pizzalist-container .pizzalist .pizza-card .pizza-card-edit .save-button-input {
   color: black;
   font-size: 100%;
-  margin-right: 20px;
-  height: 30%;
+  margin-left: 20px;
+  height: 70%;
   background-color: rgb(167, 159, 159);
   border: none;
   border-radius: 10px;
@@ -580,10 +588,10 @@ body .container2 .successful-order .ordered .details-card {
   box-shadow: 1px 1px 1px 1px grey;
   width: 10%;
 }
-#pizzalist-container .pizzalist .pizza-card .pizza-card-edit .save-button:active {
+#pizzalist-container .pizzalist .pizza-card .pizza-card-edit .save-button-input:active {
   transition: ease-in;
   box-shadow: none;
-  width: 10%;
+  width: 9%;
 }
 #pizzalist-container .pizzalist .pizza-card .pizza-card-edit .checkbox-div {
   display: flex;
@@ -592,14 +600,14 @@ body .container2 .successful-order .ordered .details-card {
   color: black;
   font-size: 100%;
   margin-left: 10px;
-  height: 30%;
+  height: 50%;
   background-color: rgb(167, 159, 159);
   border: none;
   border-radius: 10px;
   font-weight: 700;
   padding: 5px;
   box-shadow: 1px 1px 1px 1px grey;
-  width: 10%;
+  width: 8%;
 }
 #pizzalist-container .pizzalist .pizza-card .pizza-card-edit .checkbox-div .checkbox {
   color: black;

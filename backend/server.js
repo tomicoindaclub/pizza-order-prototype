@@ -86,6 +86,7 @@ app.post("/add-pizza", (req, res) => {
     return res.status(400).send("No files were uploaded.");
   }
 
+  const newPizzaImg = req.files.image;
   const newPizzaData = {
     isActive: true,
     id: req.body.id,
@@ -118,6 +119,43 @@ app.post("/add-pizza", (req, res) => {
           }
         }
       );
+    }
+  });
+});
+
+app.post("/edit-pizza", (req, res) => {
+  const newMenu = req.body;
+  const uploadPath = path.join(`${__dirname}/data/menu.json`);
+
+  fs.writeFile(uploadPath, JSON.stringify(newMenu, null, 2), (err) => {
+    if (err) {
+      console.log(err);
+      return res.status(500).send(err);
+    }
+  });
+});
+
+app.post("/edit-pizza-img", (req, res) => {
+  if (!req.files || Object.keys(req.files).length === 0) {
+    return res.status(400).send("No files were uploaded.");
+  }
+  const editedPizzaImg = req.files.newImg;
+
+  editedPizzaImg.mv(`${__dirname}/data/img/${editedPizzaImg.name}`, (err) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+});
+
+app.delete("/delete-pizza", (req, res) => {
+  const newMenu = req.body;
+  const uploadPath = path.join(`${__dirname}/data/menu.json`);
+
+  fs.writeFile(uploadPath, JSON.stringify(newMenu, null, 2), (err) => {
+    if (err) {
+      console.log(err);
+      return res.status(500).send(err);
     }
   });
 });
