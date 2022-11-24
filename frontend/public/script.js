@@ -43,7 +43,7 @@ const orderComponent = function (id, pic, pizzaName, amount) {
 `;
 };
 
-// const deteteItem = document.querySelector(".delete-item");
+const deteteItem = document.querySelector(".delete-item");
 
 // fetch function ami behívja a menu.json-t
 
@@ -148,9 +148,9 @@ orderButton.addEventListener("click", function () {
   }
   orderItems.forEach(itemSort);
 
-  /* deteteItem.addEventListener("click", function () {
-    itemArray.remove;
-  }); */
+  deteteItem.addEventListener("click", function () {
+    // kiválasztja ID alapján az aktuális order-pizza-cardot és azt törli a HTML-jét és az orderArray-ból is kiveszi (ezeket a gombokat is ID alapján kellene párosítani valahogy)
+  });
 
   // itt tároljuk el az egész rendelést
 

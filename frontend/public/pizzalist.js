@@ -67,6 +67,7 @@ const fetchMenu = async () => {
 };
 
 let selectedItemCard;
+let prevItemID;
 let editedMenuItemArray = [];
 
 async function loadEvent() {
@@ -102,6 +103,12 @@ async function loadEvent() {
       // gombokkal valahogy le kell kezelni hogy az adott pizzának ami a json-ből lekért eredmény (itt egy menu nevű tömb) hányadik eleme, majd annak az elemnek a kulcsérték-ét módosítani kell, pl gombnyomásra megváltozik annak az elemnek a HTML-je és input mezők lesznek ahová új értékeket tudunk írni és ezután visszaküldeni az új értékeket
 
       let itemID = parseInt(this.id.substring(3));
+
+      if (prevItemID != itemID && prevItemID != undefined) {
+        window.alert("Már szerkesztesz egy pizzát!");
+        return;
+      }
+
       let itemCards = document.querySelectorAll(".pizza-card");
       itemCards.forEach((selected) => {
         if (parseInt(selected.id) === itemID) {
@@ -110,6 +117,10 @@ async function loadEvent() {
       });
 
       menuItems = await fetchMenu();
+
+      console.log(editedMenuItemArray);
+      console.log(editedMenuItemArray.length);
+
       menuItems.forEach((editedItem) => {
         if (parseInt(editedItem.id) === itemID) {
           selectedItemCard.innerHTML = editedMenuComponent(
@@ -118,7 +129,7 @@ async function loadEvent() {
             editedItem.ingredients
           );
           editedMenuItemArray = editedItem;
-          console.log(editedMenuItemArray);
+          prevItemID = itemID;
         }
       });
     });
