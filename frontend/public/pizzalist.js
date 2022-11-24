@@ -67,6 +67,7 @@ const fetchMenu = async () => {
 };
 
 let selectedItemCard;
+let editedMenuItemArray = [];
 
 async function loadEvent() {
   const menu = await fetchMenu();
@@ -116,6 +117,8 @@ async function loadEvent() {
             editedItem.pizzaName,
             editedItem.ingredients
           );
+          editedMenuItemArray = editedItem;
+          console.log(editedMenuItemArray);
         }
       });
     });
@@ -143,8 +146,10 @@ formElement.addEventListener("submit", (event) => {
     formElement.querySelector('input[name="pic"]').files[0]
   );
 
+  console.dir(formElement.querySelector('input[name="pic"]'));
+
   fetch("/add-pizza", {
     method: "POST",
     body: formData,
-  }).then();
+  }).then(window.location.reload());
 });
