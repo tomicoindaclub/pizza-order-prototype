@@ -40,7 +40,7 @@ const inactiveMenuComponent = function (id, pic, pizzaName, ingredients) {
 
 const editedMenuComponent = function (id, pizzaName, ingredients) {
   return `
-     <div class="form">
+     <div class="pizza-card-edit" id="${id}">
           <form action="">
             <input type="text" name="id"  value="${id}"/>
             <input type="text" name="pizzaName"  value="${pizzaName}"/>
@@ -50,10 +50,16 @@ const editedMenuComponent = function (id, pizzaName, ingredients) {
               Kép feltöltése
             </label>
             <input type="file" name="pic" />
+            <label class="upload-button">
+              <input type="submit" />
+              Mentés
+            </label>
           </form>
-      <button class="save-button" id="save${id}">Mentés</button>
-      <input type="checkbox" id="check-${id}" name="${pizzaName}" />
-      <label for="${pizzaName}">Aktív?</label> `;
+      
+      <div class="checkbox-div">
+      <input class="checkbox" type="checkbox" id="check-${id}" name="${pizzaName}" />
+      <label class="checkbox-label" for="${pizzaName}">Aktív?</label> 
+      </div>`;
 };
 
 const fetchMenu = async () => {
