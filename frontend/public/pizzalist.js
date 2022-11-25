@@ -278,5 +278,5 @@ formElement.addEventListener("submit", (event) => {
   fetch("/add-pizza", {
     method: "POST",
     body: formData,
-  }).then(window.location.reload());
+  }).then();
 });

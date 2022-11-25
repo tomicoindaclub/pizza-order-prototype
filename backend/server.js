@@ -86,7 +86,8 @@ app.post("/add-pizza", (req, res) => {
     return res.status(400).send("No files were uploaded.");
   }
 
-  const newPizzaImg = req.files.image;
+  const newPizzaImg = req.files.pic;
+
   const newPizzaData = {
     isActive: true,
     id: req.body.id,
