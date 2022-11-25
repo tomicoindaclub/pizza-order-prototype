@@ -64,77 +64,19 @@
     }
   },
   {
-    "name": "xwx",
-    "phone": "xedxed",
-    "email": "xededxe",
-    "address": "dxed",
+    "name": "Kiss Péter",
+    "phone": "+36209560031",
+    "email": "kisspeti@citromail.hu",
+    "address": "Budapest",
     "order": {
       "orderArray": [
-        {
-          "pizza": "Bianca Rosa",
-          "amount": "7"
-        },
-        {
-          "pizza": "Bianca Verde",
-          "amount": "4"
-        },
-        {
-          "pizza": "Queen Margarita",
-          "amount": "6"
-        },
         {
           "pizza": "Margarita",
           "amount": "3"
         },
         {
-          "pizza": "Gombás",
-          "amount": "9"
-        },
-        {
-          "pizza": "Négysajtos",
-          "amount": "8"
-        },
-        {
-          "pizza": "Kolbászos",
-          "amount": "7"
-        }
-      ]
-    }
-  },
-  {
-    "name": "adefrwetgewrtger",
-    "phone": "htrthrthr",
-    "email": "rtthrthrthrz",
-    "address": "gerghethert",
-    "order": {
-      "orderArray": [
-        {
-          "pizza": "Margarita",
-          "amount": "4"
-        },
-        {
           "pizza": "Queen Margarita",
-          "amount": "4"
-        },
-        {
-          "pizza": "Bianca Verde",
-          "amount": "4"
-        },
-        {
-          "pizza": "Bianca Rosa",
-          "amount": "5"
-        },
-        {
-          "pizza": "Gombás",
-          "amount": "5"
-        },
-        {
-          "pizza": "Négysajtos",
-          "amount": "6"
-        },
-        {
-          "pizza": "Négysajtos",
-          "amount": "4"
+          "amount": "1"
         }
       ]
     }

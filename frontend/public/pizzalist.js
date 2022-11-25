@@ -146,22 +146,13 @@ async function loadEvent() {
       saveButton.addEventListener("click", (event) => {
         event.preventDefault();
 
-        //checkbox-ból kinyert érték végűl true vagy false legyen ne "on" vagy "off"
-
         let editedPizzaElement = document.querySelector(".pizza-card-edit");
-        if (
-          editedPizzaElement.querySelector('input[name="isActive"]').value ===
-          "on"
-        ) {
-          pizzaStatus = true;
-        } else {
-          pizzaStatus = false;
-        }
 
         //kimentett értékek eltárolása
 
         let modifiedItemArray = {
-          isActive: pizzaStatus,
+          isActive: editedPizzaElement.querySelector('input[name="isActive"]')
+            .checked,
           id: parseInt(
             editedPizzaElement.querySelector('input[name="id"]').value
           ),
@@ -278,5 +269,5 @@ formElement.addEventListener("submit", (event) => {
   fetch("/add-pizza", {
     method: "POST",
     body: formData,
-  }).then();
+  }).then(window.location.reload());
 });
