@@ -38,7 +38,6 @@ const orderComponent = function (id, pic, pizzaName, amount) {
     <form>
         <h2 class="amount${id}">${amount} db</h2>
     </form>
-    <button class="delete-item">X</button>
 </div>
 `;
 };
@@ -147,10 +146,6 @@ orderButton.addEventListener("click", function () {
     orderArray.push(itemArray);
   }
   orderItems.forEach(itemSort);
-
-  deteteItem.addEventListener("click", function () {
-    // kiválasztja ID alapján az aktuális order-pizza-cardot és azt törli a HTML-jét és az orderArray-ból is kiveszi (ezeket a gombokat is ID alapján kellene párosítani valahogy)
-  });
 
   // itt tároljuk el az egész rendelést
 

@@ -1,6 +1,8 @@
 const rootElement = document.querySelector("#pizzalist-container");
 const menuListElement = document.querySelector(".pizzalist");
 
+//komponensek
+
 const activeMenuComponent = function (id, pic, pizzaName, ingredients) {
   return `
 <div class="pizza-card" id="${id}">
@@ -67,6 +69,8 @@ let prevItemID;
 let editedMenuItemArray = [];
 
 async function loadEvent() {
+  //bekérjük a menu.json-t és abból feltöltjük a komponenseket
+
   const menu = await fetchMenu();
 
   for (let i = 0; i < menu.length; i++) {
@@ -93,18 +97,23 @@ async function loadEvent() {
     }
   }
 
-  //ehhez hasonlóan kellene lekezelni a delete gombokat
+  //szerkesztés gpmbok lekezelése
 
-  const buttons = document.querySelectorAll(".edit-button");
-  for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener("click", async function () {
-      //ehhez hasonlóan kapsz ID-t a gombról amivel tudsz keresni a menu,json-ban
+  const editButtons = document.querySelectorAll(".edit-button");
+  for (let i = 0; i < editButtons.length; i++) {
+    editButtons[i].addEventListener("click", async function () {
+      //gomb HTML ID-jából kiolvassuk az ID-t ami egyezik a menu.json-ban az id-val
+
       let itemID = parseInt(this.id.substring(3));
+
+      //vizsgálat hogy egyszerre csak egyet lehessen szerkeszteni
 
       if (prevItemID != itemID && prevItemID != undefined) {
         window.alert("Már szerkesztesz egy pizzát!");
         return;
       }
+
+      //megnézzük hogy melyik kártyának a HTML-jét kell majd cserélni
 
       let itemCards = document.querySelectorAll(".pizza-card");
       itemCards.forEach((selected) => {
@@ -113,14 +122,12 @@ async function loadEvent() {
         }
       });
 
-      //ehhez hasonlóan behívod a menu.json-t és alatta .forEach ami végiglépked az elemein és az if-ben a vizsgálat alapján kapod meg melyik eleme a tömbnek amit törölni kell
+      //kicseréljük a HTML-t és az inputokba beletesszük az adott item értékeit
 
       menuItems = await fetchMenu();
 
       menuItems.forEach((editedItem) => {
         if (parseInt(editedItem.id) === itemID) {
-          // ide majd az kell hogy a kiválasztott elemét annak a tömbnek amin megyünk végig kitöröljük
-
           selectedItemCard.innerHTML = editedMenuComponent(
             editedItem.id,
             editedItem.pizzaName,
@@ -131,11 +138,15 @@ async function loadEvent() {
         }
       });
 
+      //mentés lekezelése
+
       let pizzaStatus;
 
       let saveButton = document.querySelector(".save-button-input");
       saveButton.addEventListener("click", (event) => {
         event.preventDefault();
+
+        //checkbox-ból kinyert érték végűl true vagy false legyen ne "on" vagy "off"
 
         let editedPizzaElement = document.querySelector(".pizza-card-edit");
         if (
@@ -146,6 +157,8 @@ async function loadEvent() {
         } else {
           pizzaStatus = false;
         }
+
+        //kimentett értékek eltárolása
 
         let modifiedItemArray = {
           isActive: pizzaStatus,
@@ -163,6 +176,8 @@ async function loadEvent() {
           }`,
         };
 
+        //beolvasott menu.json-ból kapott tömb frissítése az adott elem új értékeivel
+
         menuItems.forEach((item) => {
           if (item.id === itemID) {
             item.isActive = modifiedItemArray.isActive;
@@ -170,9 +185,10 @@ async function loadEvent() {
             item.pizzaName = modifiedItemArray.pizzaName;
             item.ingredients = modifiedItemArray.ingredients;
             item.pic = modifiedItemArray.pic;
-            console.log(item);
           }
         });
+
+        //kép mentése
 
         formData = new FormData();
         formData.append(
@@ -180,7 +196,7 @@ async function loadEvent() {
           editedPizzaElement.querySelector('input[name="newImg"]').files[0]
         );
 
-        //  /delete-pizza fetchel küldöd vissza backendre
+        //fetch ami a JSON-t küldi azaz a frissített menu.json-t
 
         fetch("/edit-pizza", {
           method: "POST",
@@ -190,7 +206,7 @@ async function loadEvent() {
           body: JSON.stringify(menuItems),
         });
 
-        console.dir(editedPizzaElement.querySelector('input[name="newImg"]'));
+        //fetch ami a képet küldi
 
         fetch("/edit-pizza-img", {
           method: "POST",
@@ -199,15 +215,48 @@ async function loadEvent() {
       });
     });
   }
+
+  //törlés gombok lekezelése
+
+  const deleteButtons = document.querySelectorAll(".delete-button");
+  for (let j = 0; j < deleteButtons.length; j++) {
+    deleteButtons[j].addEventListener("click", async function () {
+      //gomb HTML ID-jából kiolvassuk az ID-t ami egyezik a menu.json-ban az id-val
+
+      let deleteItemID = parseInt(this.id.substring(6));
+
+      //beolvassuk a menu.json-t majd végig iterálunk rajta amíg meg nem találjuk az egyező ID-t, ha ez megvan akkor az adott elemét a tömbenk töröljük
+
+      menuItems = await fetchMenu();
+
+      for (let k = 0; k < menuItems.length; k++) {
+        if (parseInt(menuItems[k].id) === deleteItemID) {
+          menuItems.splice(k, 1);
+        }
+      }
+
+      //frissített menu visszaküldése
+
+      fetch("/delete-pizza", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(menuItems),
+      }).then(window.location.reload());
+    });
+  }
 }
 
-// delete gombok lekezelése ezen a sor alá
-
 rootElement.addEventListener("loaded", loadEvent());
+
+//új elem hozzáadása a menu.json-hoz
 
 const formElement = document.querySelector("form");
 formElement.addEventListener("submit", (event) => {
   event.preventDefault();
+
+  //adatok tárolása és mentése FormData-ba
 
   const formData = new FormData();
   formData.append("id", formElement.querySelector('input[name="id"]').value);
@@ -223,6 +272,8 @@ formElement.addEventListener("submit", (event) => {
     "pic",
     formElement.querySelector('input[name="pic"]').files[0]
   );
+
+  // FormData küldése
 
   fetch("/add-pizza", {
     method: "POST",

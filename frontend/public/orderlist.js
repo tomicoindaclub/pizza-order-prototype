@@ -1,5 +1,7 @@
 const orderSummaryElement = document.querySelector(".orderlist");
 
+//fetch és komponensek
+
 const fetchOrder = async () => {
   return fetch("/orders").then((res) => res.json());
 };
@@ -30,11 +32,15 @@ const orderCardComponent = `<div class="order-card"></div>`;
 async function loadOrders() {
   const orders = await fetchOrder();
 
+  //tömb minden eleme kap egy ilyen komponenst
+
   orders.forEach(() => {
     orderSummaryElement.insertAdjacentHTML("beforeend", orderCardComponent);
   });
 
   let orderCardsHTML = document.querySelectorAll(".order-card");
+
+  //kiolvassuk az adatokat majd az adatok rendelés tömbjén mégegyszer végig kell iterálni hogy a rendelés összes tétele ott legyen
 
   for (let i = 0; i < orderCardsHTML.length; i++) {
     orderCardsHTML[i].insertAdjacentHTML(
