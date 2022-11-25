@@ -190,7 +190,7 @@ async function loadEvent() {
         //fetch ami a JSON-t küldi azaz a frissített menu.json-t
 
         fetch("/edit-pizza", {
-          method: "POST",
+          method: "PUT",
           headers: {
             "Content-Type": "application/json",
           },

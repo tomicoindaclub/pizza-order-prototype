@@ -124,7 +124,7 @@ app.post("/add-pizza", (req, res) => {
   });
 });
 
-app.post("/edit-pizza", (req, res) => {
+app.put("/edit-pizza", (req, res) => {
   const newMenu = req.body;
   const uploadPath = path.join(`${__dirname}/data/menu.json`);
 
