@@ -80,5 +80,23 @@
         }
       ]
     }
+  },
+  {
+    "name": "Kiss Péter",
+    "phone": "+36209560031",
+    "email": "kisspeti@citromail.com",
+    "address": "Budapest",
+    "order": {
+      "orderArray": [
+        {
+          "pizza": "Margarita",
+          "amount": "2"
+        },
+        {
+          "pizza": "Queen Margarita",
+          "amount": "1"
+        }
+      ]
+    }
   }
 ]

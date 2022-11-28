@@ -1,13 +1,6 @@
 [
   {
     "isActive": true,
-    "id": 1,
-    "pizzaName": "Margarita",
-    "ingredients": "paradicsomszósz, sajt, bazsalikom.",
-    "pic": "/data/img/margherita.png"
-  },
-  {
-    "isActive": true,
     "id": 2,
     "pizzaName": "Queen Margarita",
     "ingredients": "paradicsomszósz, sajt, zöldfűszerek, paprika.",
@@ -47,5 +40,12 @@
     "pizzaName": "Kolbászos",
     "ingredients": "paradicsomszósz, kolbász, hagyma, bazsalikom.",
     "pic": "/data/img/sausage.png"
+  },
+  {
+    "isActive": true,
+    "id": "8",
+    "pizzaName": "Új pizza",
+    "ingredients": "Sok dolog",
+    "pic": "/data/img/PIZZA.jpg"
   }
 ]
